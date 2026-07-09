@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<View min_size="Point(269,19)" max_size="Point(269,19)" view_layout="horizontal">
+		<View min_size="Point(17,19)">
+			<BitmapView layout_borders="Rect(1,0,0,0)" name="Icon"/>
+		</View>
+		<View min_size="Point(251,19)" max_size="Point(251,19)">
+			<PowerBar name="Meter5" full_gfx="DMBarForeground" bg_gfx="DMBarBackground">
+				<PowerBar name="Meter4" full_gfx="DMBarForeground" >
+					<PowerBar name="Meter3" full_gfx="DMBarForeground">
+						<PowerBar name="Meter2" full_gfx="DMBarForeground">
+							<PowerBar name="Meter" full_gfx="DMBarForeground">
+								<View view_layout="horizontal">
+									<TextView name="LeftText" max_size="Point(85,-1)" font="BOLD" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW" layout_borders="Rect(2,0,0,0)"/>
+									<HLayoutSpacer/>
+									<TextView name="RightText" font="SMALL" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW" layout_borders="Rect(0,0,2,0)"/>
+								</View>
+							</PowerBar>
+						</PowerBar>
+					</PowerBar>
+				</PowerBar>
+			</PowerBar>
+		</View>
+		<HLayoutSpacer/>
+	</View>
+</root>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<View name="Root" min_size="Point(50,-1)" max_size="Point(50,-1)">
+		<Haxxor/>
+	</View>
+</root>

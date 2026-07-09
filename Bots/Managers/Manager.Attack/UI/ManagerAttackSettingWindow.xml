@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<View view_layout="vertical" name="parent">
+		<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="ManagerAttack" layout_borders="Rect(2,2,2,2)" max_size="Point(16000,-1)">
+			<TextView value=" " layout_borders="Rect(5,2,5,2)"/>
+			<Button name="ManagerAttackInfoView" label="Info" layout_borders="Rect(5,2,3,2)"/>
+			<Button name="Enable_Disable_Button" label="" layout_borders="Rect(5,2,3,5)"/>
+			<TextView value="Tank Options" layout_borders="Rect(0,2,0,2)"/>
+			
+			<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="TankOptions" layout_borders="Rect(2,2,2,2)" max_size="Point(16000,-1)">
+				<View v_alignment="top" h_alignment="center" view_layout="vertical" layout_borders="Rect(0,0,0,0)">
+					<TextView value=" " layout_borders="Rect(0,0,0,0)"/>
+					<OptionCheckBox label="Team Lead" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerAttack__TeamLead" layout_borders="Rect(5,1,5,1)"/>
+				</View>
+				<View v_alignment="top" h_alignment="center" view_layout="vertical" layout_borders="Rect(0,0,0,0)">
+					<TextView value=" " layout_borders="Rect(0,0,0,0)"/>
+					<OptionCheckBox label="Switch to mobs attacking team (not you)" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerAttack__Switching" layout_borders="Rect(5,1,5,5)"/>
+				</View>
+			</BorderView>
+			
+			<TextView value="Range Options" layout_borders="Rect(0,7,0,2)"/>
+			<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="TauntOptions" layout_borders="Rect(2,2,2,2)" max_size="Point(16000,-1)">
+				<View v_alignment="top" h_alignment="center" view_layout="vertical" layout_borders="Rect(0,0,0,0)">
+					<TextView value=" " layout_borders="Rect(0,0,0,0)"/>
+					<OptionCheckBox label="Show range" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerAttack__Rings" layout_borders="Rect(0,0,0,7)"/>
+				</View>
+				<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,0,5,0)"/>
+				<TextView value="Attack Range" layout_borders="Rect(5,5,5,2)"/>
+				<TextInputView name="AttackRangeBox" min_size="Point(30,14)" max_size="Point(30,14)" layout_borders="Rect(4,2,4,2)"/>
+				<Button name="Taunt_Button" label="" layout_borders="Rect(5,2,5,2)"/>
+				<TextView name="TauntRange" value="" layout_borders="Rect(5,2,5,2)"/>
+				<TextInputView name="TauntRangeBox" min_size="Point(30,14)" max_size="Point(30,14)" layout_borders="Rect(4,2,4,2)"/>
+				<Button name="SetRange" label="Set Range" layout_borders="Rect(5,2,3,4)"/>
+			</BorderView>
+			<Button name="ManagerAttackHelpersView" label="Assist" layout_borders="Rect(5,5,3,2)"/>
+			<Button name="AdvancedSettingsButton" label="Advanced Setting" layout_borders="Rect(5,2,3,5)"/>
+			<View view_layout="center">
+				<View name="Errors" view_layout="vertical" v_alignment="TOP" h_alignment="center" layout_borders="Rect(0,0,0,0)" max_size="Point(16000,-1)">
+					<Haxxor/>
+				</View>
+			</View>
+			
+			<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,2,5,4)"/>
+			<TextView name="VersionNumber" value="" layout_borders="Rect(0,0,0,4)"/>
+		</BorderView>
+	</View>
+</root>

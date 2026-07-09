@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="Info" layout_borders="Rect(0,0,0,2)" max_size="Point(16000,-1)">
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+
+		<TextView value="Instructions:" font="HUGE" color="0x0000FF00" layout_borders="Rect(0,0,0,2)"/>
+
+		<TextView value="Kit Settings" font="LARGE" color="0x0000FF00" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Auto Sit Kit - Makes the character sit when health and/or nano fall below the thresholds." layout_borders="Rect(5,0,5,2)"/>
+		<TextView value="Health % / Nano % - Thresholds that trigger auto sit behavior." layout_borders="Rect(5,0,5,2)"/>
+		<TextView value="Save - Saves the current health and nano threshold values." layout_borders="Rect(5,0,5,5)"/>
+
+		<TextView value="POH Pathing" font="LARGE" color="0x0000FF00" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Path to portal mobs/Return - Sends the character to the portal mob. Clicking again returns them" layout_borders="Rect(5,0,5,0)"/>
+		<TextView value="to the position where the button was first pressed. Set positions in POH Positions." layout_borders="Rect(5,0,5,5)"/>
+		<TextView value="Pho Buff - Opens a window showing the remaining duration of Phobettor's Shattered Mirror" layout_borders="Rect(5,0,5,0)"/>
+		<TextView value="of the Xan buff." layout_borders="Rect(5,0,5,5)"/>
+
+		<TextView value="Broadcasting" font="LARGE" color="0x0000FF00" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Broadcast Settings - Broadcasts the following options to your team:" layout_borders="Rect(5,0,5,2)"/>
+		<TextView value="(12man) Morph Pathing - Auto-paths characters to the correct podium to remove" layout_borders="Rect(5,0,5,0)"/>
+		<TextView value="the morph debuff." layout_borders="Rect(5,0,5,2)"/>
+		<TextView value="(DB3) Shapes - Auto-uses the DB3 shapes in the fire room." layout_borders="Rect(5,0,5,2)"/>
+		<TextView value="(Sub) Belly Pathing - Automatically returns characters from the Belly." layout_borders="Rect(5,0,5,2)"/>
+		<TextView value="(Sub) Eumenides - Moves characters to and from their Eumenides positions." layout_borders="Rect(5,0,5,0)"/>
+		<TextView value="Set positions in Eumenides Positions." layout_borders="Rect(5,0,5,5)"/>
+
+		<TextView value="Extras" font="LARGE" color="0x0000FF00" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Show traps and mines - Displays a ring indicating the trigger radius of detected" layout_borders="Rect(5,0,5,0)"/>
+		<TextView value="traps or mines." layout_borders="Rect(5,0,5,5)"/>
+		<TextView value="(POH) Highlight Rifts - Shows a ring around the rift. Red = &lt;10s," layout_borders="Rect(5,0,5,0)"/>
+		<TextView value="Yellow = 10–20s, Green = &gt;20s remaining." layout_borders="Rect(5,0,5,5)"/>
+		<TextView value="(POH) Path to Alters - Automatically moves the character to the correct altar if they" layout_borders="Rect(5,0,5,0)"/>
+		<TextView value="receive the debuff in the second boss room." layout_borders="Rect(5,0,5,5)"/>
+
+		<TextView value="Positioning" font="LARGE" color="0x0000FF00" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Eumenides Positions - Assigns the character's pathing position for the portal mobs" layout_borders="Rect(5,0,5,0)"/>
+		<TextView value="during Eumenides. Used by (Sub) Eumenides logic." layout_borders="Rect(5,0,5,2)"/>
+		<TextView value="POH Positions - Stores each character's return position. Used by" layout_borders="Rect(5,0,5,0)"/>
+		<TextView value="'Path to portal mobs/Return'." layout_borders="Rect(5,0,5,5)"/>
+
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+
+		<TextView value="Commands:" font="LARGE" color="0x0000FF00" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="/aufly - Toggles fly selections." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="/autosit - Toggles auto sitting with kits." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="/gridall - all use grid nano or can." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+	</BorderView>
+</root>

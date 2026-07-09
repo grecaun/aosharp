@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<View view_layout="vertical" h_alignment="CENTER" v_alignment="TOP" layout_borders="Rect(5,5,5,5)">
+		<View view_layout="horizontal" h_alignment="LEFT">
+			<TextView name="TankName" value="" layout_borders="Rect(10,5,2,0)" max_size="Point(160,20)"/>
+			<Button name="SaveTank" label="Save" layout_borders="Rect(3,5,10,5)" max_size="Point(80,20)" h_alignment="LEFT"/>
+		</View>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<OptionCheckBox label="Auto Teaming" opt_category="AOSharp" opt_type="variant" opt_variable="AutomatonKiteHill__AutoTeaming" layout_borders="Rect(5,5,5,5)" />
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		
+		<View v_alignment="TOP" h_alignment="Left" view_layout="horizontal" layout_borders="Rect(5,5,90,5)" max_size="Point(16000,-1)">
+			<TextView  value="LVL Limit" h_alignment="CENTER" min_size="Point(50,14)" max_size="Point(50,14)" layout_borders="Rect(5,0,5,5)"/>
+			<TextInputView name="LevelLimitBox" h_alignment="CENTER" min_size="Point(50,14)" max_size="Point(50,14)" layout_borders="Rect(5,0,5,5)"/>
+			<Button name="Save_Level_Button" label="Save" layout_borders="Rect(5,5,5,5)"/>
+		</View>
+
+
+		<View view_layout="horizontal" h_alignment="CENTER" layout_borders="Rect(5,5,5,5)">
+			<TextView value="Players to ignore:" layout_borders="Rect(5,5,5,0)" />
+			<DropdownMenu name="Ignored_players"  layout_borders="Rect(5,0,5,0)" />
+			<Button name="SaveIgnored" label="Save" layout_borders="Rect(5,0,5,0)" />
+			<Button name="DeleteIgnored" label="Delete" layout_borders="Rect(5,0,5,0)" />
+		</View>
+
+	</View>
+</root>

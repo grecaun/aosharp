@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="Info" layout_borders="Rect(0,0,0,2)" max_size="Point(16000,-1)">
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+
+		<TextView value="Instructions:" font="HUGE" color="0x0000FF00" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Do not use Manager Help" layout_borders="Rect(5,0,5,5)"/>
+
+		<TextView value="POH Pathing" font="LARGE" color="0x0000FF00" layout_borders="Rect(0,0,0,2)"/>
+		
+		<TextView value="Path to portal mobs - Sends the characters to the portal mob." layout_borders="Rect(0,0,0,0)"/>
+		<TextView value="Once they are all in position, they auto attack and return." layout_borders="Rect(0,0,0,0)"/>
+		<TextView value="Turn Manager Attack off and sync move off." layout_borders="Rect(0,0,0,5)"/>
+
+		<TextView value="Path to Alters - Automatically moves the character to the correct altar if they" layout_borders="Rect(5,5,5,0)"/>
+		<TextView value="receive the debuff in the second boss room." layout_borders="Rect(0,0,0,0)"/>
+		<TextView value="Turn sync move off." layout_borders="Rect(0,0,0,5)"/>
+
+		<TextView value="Options" font="LARGE" color="0x0000FF00" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Pho Buff - Opens a window showing the remaining duration of " layout_borders="Rect(5,0,5,0)"/>
+		<TextView value="Phobettor's Shattered Mirror of the Xan buff." layout_borders="Rect(0,0,0,5)"/>
+
+		<TextView value="Highlight Rifts - Shows a ring around the rift. Red = &lt;10s," layout_borders="Rect(0,5,0,0)"/>
+		<TextView value="Yellow = 10–20s, Green = &gt;20s remaining." layout_borders="Rect(0,0,0,5)"/>
+		
+		<TextView value="Broadcasting" font="LARGE" color="0x0000FF00" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Broadcast Settings - Broadcasts the following options to your team:" layout_borders="Rect(5,0,5,2)"/>
+
+		<TextView value="Path to Alters" layout_borders="Rect(0,5,0,5)"/>
+
+		<TextView value="Positioning" font="LARGE" color="0x0000FF00" layout_borders="Rect(0,0,0,2)"/>
+		
+		<TextView value="POH Positions - Stores each character's return position. Used by" layout_borders="Rect(0,0,0,0)"/>
+		<TextView value="'Path to portal mobs'." layout_borders="Rect(5,0,5,5)"/>
+
+		
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+	</BorderView>
+</root>

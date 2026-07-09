@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="Main" layout_borders="Rect(5,5,5,5)" max_size="Point(16000,-1)">
+		<TextView value=" " layout_borders="Rect(5,5,5,5)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<Button name="InfoButton" label="Info" layout_borders="Rect(5,5,3,5)"/>
+		<Button name="Enable_Disable_Button" label="" layout_borders="Rect(5,5,3,5)"/>
+		<Button name="TeamButton" label="" layout_borders="Rect(5,5,3,5)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<Button name="KittingButton" label="Kits" layout_borders="Rect(5,5,3,5)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<OptionCheckBox label="Leader" opt_category="AOSharp" opt_type="variant" opt_variable="AutomatonDB1__Tank" layout_borders="Rect(10,1,5,1)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<Button name="BroadcastSettings" label="Broadcast Settings" layout_borders="Rect(5,2,5,5)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<OptionCheckBox label="Farming" opt_category="AOSharp" opt_type="variant" opt_variable="AutomatonDB1__Farming" layout_borders="Rect(10,1,5,1)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<View view_layout="center">
+			<View name="Errors" view_layout="vertical" v_alignment="TOP" h_alignment="center" layout_borders="Rect(0,0,0,0)" max_size="Point(16000,-1)">
+				<Haxxor/>
+			</View>
+		</View>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView name="Counter" value="" layout_borders="Rect(0,0,0,2)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView name="LastRunTime" value="" layout_borders="Rect(0,0,0,2)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView name="VersionNumber" value="" layout_borders="Rect(0,0,0,2)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value="" layout_borders="Rect(0,0,0,2)"/>
+	</BorderView>
+</root>

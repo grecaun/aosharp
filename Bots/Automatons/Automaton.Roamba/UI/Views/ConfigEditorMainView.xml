@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<Root>
+	<View name="Root">
+		<BorderView view_layout="horizontal" layout_borders="Rect(4,4,4,0)">
+			<HLayoutSpacer/>
+			<TextView value="Roamba Config Editor" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00" layout_borders="Rect(4,4,4,4)"/>
+			<HLayoutSpacer/>
+		</BorderView>
+		<View>
+			<BorderView layout_borders="Rect(4,4,4,0)">
+				<View view_layout="horizontal" layout_borders="Rect(8,8,8,8)">
+					<CheckBox name="AttackMobs" layout_borders="Rect(1,0,0,0)"/>
+					<HLayoutSpacer/>
+					<TextView value="Attack Mobs" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+					<Button name="AttackMobsInfo" layout_borders="Rect(4,0,0,0)"/>
+				</View>
+				<View name="AttackMobsOptions">
+					<View view_layout="horizontal" layout_borders="Rect(8,4,8,8)">
+						<TextView value="Fight Timeout:"/>
+						<HLayoutSpacer/>
+						<TextInputView name="FightTimeout" feature_flags="TVF_NUMERIC" min_size="Point(20,-1)"/>
+					</View>
+					<View view_layout="horizontal" layout_borders="Rect(8,0,8,8)">
+						<CheckBox name="ManualAttackRangeMode" layout_borders="Rect(1,0,0,0)"/>
+						<HLayoutSpacer/>
+						<TextView value="Override Attack Range"/>
+					</View>
+					<View view_layout="horizontal" layout_borders="Rect(8,0,8,8)">
+						<CheckBox name="AutomaticAttackRangeMode" layout_borders="Rect(1,0,0,0)"/>
+						<HLayoutSpacer/>
+						<TextView value="Automatic Attack Range"/>
+					</View>
+					<View view_layout="horizontal" layout_borders="Rect(8,0,8,8)">
+						<TextView name="AttackName" value="Aaa:"/>
+						<HLayoutSpacer/>
+						<TextInputView name="AttackInput" feature_flags="TVF_NUMERIC" min_size="Point(20,-1)"/>
+					</View>
+				</View>
+			</BorderView>
+
+			<BorderView layout_borders="Rect(4,4,4,0)">
+				<View view_layout="horizontal" layout_borders="Rect(8,8,8,8)">
+					<CheckBox name="PathToCorpses" layout_borders="Rect(1,0,0,0)"/>
+					<HLayoutSpacer/>
+					<TextView value="Path To Corpses" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+					<Button name="PathToCorpsesInfo" layout_borders="Rect(4,0,0,0)"/>
+				</View>
+				<View name="PathToCorpsesOptions">
+					<View view_layout="horizontal" layout_borders="Rect(8,0,8,8)">
+						<TextView value="Loot Timeout:"/>
+						<HLayoutSpacer/>
+						<TextInputView name="LootTimeout" feature_flags="TVF_NUMERIC" min_size="Point(20,-1)"/>
+					</View>
+				</View>
+			</BorderView>
+
+			<BorderView layout_borders="Rect(4,4,4,0)">
+				<View view_layout="horizontal" layout_borders="Rect(8,8,8,8)">
+					<CheckBox name="PathToMobs" layout_borders="Rect(1,0,0,0)"/>
+					<HLayoutSpacer/>
+					<TextView value="Path To Mobs" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+					<Button name="PathToMobsInfo" layout_borders="Rect(4,0,0,0)"/>
+				</View>
+				<View name="PathToMobsOptions">
+					<View view_layout="horizontal" layout_borders="Rect(8,0,8,8)">
+						<TextView value="Path Range:"/>
+						<HLayoutSpacer/>
+						<TextInputView name="PathRange" feature_flags="TVF_NUMERIC" min_size="Point(20,-1)"/>
+					</View>
+				</View>
+			</BorderView>
+
+			<BorderView layout_borders="Rect(4,4,4,0)">
+				<View view_layout="horizontal" layout_borders="Rect(8,8,8,8)">
+					<CheckBox name="TauntItem" layout_borders="Rect(1,0,0,0)"/>
+					<HLayoutSpacer/>
+					<TextView value="Use Taunt Item" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+					<Button name="TauntItemInfo" layout_borders="Rect(4,0,0,0)"/>
+				</View>
+				<View name="TauntItemOptions">
+					<View view_layout="horizontal" layout_borders="Rect(8,0,8,8)">
+						<TextView value="Pull Range:"/>
+						<HLayoutSpacer/>
+						<TextInputView name="TauntRange" feature_flags="TVF_NUMERIC" min_size="Point(20,-1)"/>
+					</View>
+				</View>
+			</BorderView>
+
+			<BorderView layout_borders="Rect(4,4,4,0)">
+				<View view_layout="horizontal" layout_borders="Rect(8,8,8,8)">
+					<CheckBox name="FollowTarget" layout_borders="Rect(1,0,0,0)"/>
+					<HLayoutSpacer/>
+					<TextView value="Follow Targets" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+					<Button name="FollowTargetInfo" layout_borders="Rect(4,0,0,0)"/>
+				</View>
+				<View name="FollowTargetOptions">
+					<TextInputView name="FollowTargetList" min_size="Point(200,55)" font="SMALL" layout_borders="Rect(8,4,8,8)" feature_flags="TVF_MULTILINE|TVF_ALT_ENTER_MODE|TVF_ACCEPT_TXT_INPUT|TVF_ACCEPT_MOUSE_INPUT"/>
+				</View>
+			</BorderView>
+
+			<BorderView layout_borders="Rect(4,8,4,0)">
+				<View view_layout="horizontal" layout_borders="Rect(8,8,8,8)">
+					<CheckBox name="DisableIf" layout_borders="Rect(1,0,0,0)"/>
+					<HLayoutSpacer/>
+					<TextView value="Disable Pathing If" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+					<Button name="DisableIfInfo" layout_borders="Rect(4,0,0,0)"/>
+				</View>
+				<View name="DisableIfOptions">
+					<View view_layout="horizontal" layout_borders="Rect(8,0,8,8)">
+						<CheckBox name="DisableIfHp" layout_borders="Rect(1,0,0,0)"/>
+						<HLayoutSpacer/>
+						<TextView value="Health (%)  &lt; "/>
+						<TextInputView name="HpPercent" feature_flags="TVF_NUMERIC" min_size="Point(20,-1)" max_size="Point(20,-1)"/>
+					</View>
+
+					<View view_layout="horizontal" layout_borders="Rect(8,0,8,8)">
+						<CheckBox name="DisableIfNp" layout_borders="Rect(1,0,0,0)"/>
+						<HLayoutSpacer/>
+						<TextView value="Nano (%)  &lt; "/>
+						<TextInputView name="NpPercent" feature_flags="TVF_NUMERIC" min_size="Point(20,-1)" max_size="Point(20,-1)"/>
+					</View>
+
+					<View view_layout="horizontal" layout_borders="Rect(8,0,8,8)">
+						<CheckBox name="DisableIfAttacked" layout_borders="Rect(1,0,0,0)"/>
+						<HLayoutSpacer/>
+						<TextView value="Being Attacked"/>
+					</View>
+
+					<View view_layout="horizontal" layout_borders="Rect(8,0,8,8)">
+						<CheckBox name="DisableIfPlayersNearby" layout_borders="Rect(1,0,0,0)"/>
+						<HLayoutSpacer/>
+						<TextView value="Players Nearby"/>
+					</View>
+				</View>
+			</BorderView>
+
+			<BorderView layout_borders="Rect(4,4,4,0)">
+				<View view_layout="horizontal" layout_borders="Rect(8,8,8,8)">
+					<CheckBox name="PriorityNamesOnly" layout_borders="Rect(1,0,0,0)"/>
+					<HLayoutSpacer/>
+					<TextView value="Priority Names Only" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+					<Button name="PriorityNamesOnlyInfo" layout_borders="Rect(4,0,0,0)"/>
+				</View>
+			</BorderView>
+
+			<BorderView layout_borders="Rect(4,4,4,0)">
+				<View view_layout="horizontal" layout_borders="Rect(8,8,8,8)">
+					<TextView value="Wander Limit:"/>
+					<HLayoutSpacer/>
+					<TextInputView name="WanderLimit" feature_flags="TVF_NUMERIC" min_size="Point(20,-1)"/>
+				</View>
+			</BorderView>
+
+			<BorderView layout_borders="Rect(4,4,4,4)">
+				<View view_layout="horizontal" layout_borders="Rect(8,8,8,8)">
+					<HLayoutSpacer/>
+					<TextView layout_borders="Rect(15,0,0,0)" value="Export / Save" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+					<HLayoutSpacer/>
+					<Button name="ExportSaveInfo" layout_borders="Rect(4,0,0,0)"/>
+				</View>
+				<View view_layout="horizontal" layout_borders="Rect(8,0,8,8)">
+					<TextInputView name="FileName" min_size="Point(80,16)" max_size="Point(80,16)"/>
+					<HLayoutSpacer/>
+					<Button min_size="Point(50,-1)" name="Save" label="Save"/>
+					<Button min_size="Point(25,-1)" name="Close" label="Close" layout_borders="Rect(2,0,0,0)"/>
+				</View>
+			</BorderView>
+		</View>	
+	</View>
+</Root>

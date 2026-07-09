@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="Settings" layout_borders="Rect(5,5,5,5)" max_size="Point(16000,-1)">
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value="" layout_borders="Rect(5,5,5,5)"/>
+		<Button name="InfoView" label="INSTRUCTIONS" layout_borders="Rect(5,5,3,5)"/>
+		<TextView value="" layout_borders="Rect(5,5,5,5)"/>
+		<OptionCheckBox label="Enable" opt_category="AOSharp" opt_type="variant" opt_variable="CrystalFilledbytheSource__Enable" layout_borders="Rect(10,1,5,1)"/>
+		<TextView value="" layout_borders="Rect(5,5,5,5)"/>
+		<OptionRadioButtonGroup label="Boon of Ergo Selection" layout_borders="Rect(10,1,5,1)" opt_type="variant" opt_variable="CrystalFilledbytheSource__BoonofErgoSelection">
+			<RadioButton label="Aban-Shere QL25 " value="229922"/>
+			<RadioButton label="Ocra-Bhotaar QL50" value=" 229926"/>
+			<RadioButton label="Ocra-Thar QL75" value="229928"/>
+			<RadioButton label="Ocra-Roch QL100" value="229930"/>
+			<RadioButton label="Ocra-Xum QL115" value="229932"/>
+			<RadioButton label="Ocra-Shere QL130" value="229934"/>
+			<RadioButton label="Enel-Bhotaar QL140" value="229936"/>
+			<RadioButton label="Enel-Thar QL160" value=" 229938"/>
+			<RadioButton label="Enel-Roch QL180" value="229940"/>
+			<RadioButton label="Enel-Xum QL255" value=" 229942"/>
+		</OptionRadioButtonGroup>
+		<TextView value="" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value="Name Backpacks Crystals" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value="Crystals 1, Crystals 2, Crystals 3" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value="" layout_borders="Rect(5,5,5,5)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+	</BorderView>
+</root>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="Settings" layout_borders="Rect(0,0,0,2)" max_size="Point(16000,-1)">
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Inventory Manager - delete named items/ql on it hitting the inventory ONLY" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Best used in conjunction with lootmanager." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Be PRECISE about what you would like to delete or be prepared to cry." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="KNOWN ISSUE - Sometimes adding rules bugs out and you get gibberish. Lootmanager has the same issue. Just delete gibberish line, eject, inject and continue." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="KNOWN ISSUE - Sometimes the game says an item in inventory is being equipped when it isn't. Just zone." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Be careful about adding backpack types (eg Beeping Backpack). Even if you have renamed it this plugin will delete it (the SDK still sees the original name)." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Developed by Skream. LootManager developed by Devi, Skream, Know and others" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="" layout_borders="Rect(0,0,0,2)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Commands;" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="/invm - Enables" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+	</BorderView>
+</root>

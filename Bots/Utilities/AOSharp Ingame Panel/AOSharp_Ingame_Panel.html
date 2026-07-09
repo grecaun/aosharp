@@ -1,0 +1,132 @@
+0) --- Create necessary files ---
+I'm going to assume you know how to create new files or to remove extensions from files. 
+Just right-click into the folder and select New - Text Document. Rename whatever text document by removing the .txt-extension from it later. 
+https://www.wikihow.com/Change-a-File-Extension this wikihow, section 2, describes it in detail.
+
+
+1) --- Locate necessary folders ---
+ Locate your AO folder under "%localappdata%\Funcom\Anarchy Online" (e.g: C:\Users\xx\AppData\Local\Funcom\Anarchy Online).
+There should be a unique foldername with letters and/or numbers "a1b2c3ff" or something similar. 
+Open this folder and the subfolder "Anarchy Online".
+
+
+2) --- Create necessary folders ---
+If not already present, create a subfolder called "scripts" and open this folder. 
+You should now be in the folder "C:\Users\xxxxxxxxx\AppData\Local\Funcom\Anarchy Online\xxxxxxxxxx\Anarchy Online\scripts\"
+
+
+3) --- Create the file you call ingame with /command ---
+Create a new file, right-click and choose "New Text Document". Whatever name you give this file will be the /command ingame.
+I've called mine "aosharpsettings" so ingame i type /aosharpsettings (or just /ao + tab to autocomplete). Paste the following:
+
+showfile aosharpsettings
+
+
+
+4) --- Locate (or create) next subfolder ---
+After you have created your text file, create a new subfolder called "text". Open this folder. You should now be in the folder: 
+"C:\Users\xxxxxxxxx\AppData\Local\Funcom\Anarchy Online\xxxxxxxxxx\Anarchy Online\scripts\text"
+
+
+5) --- Create the file containing the script itself ---
+Create a new file and call it "aosharpsettings". 
+Paste the following code to create the actual panel you can use/access ingame. The file contains ascii code for empty spaces, 
+if you need to adjust width of spacings, copy the spacing from the code underneath instead of just inserting blank spaces with spacebar. 
+(ascii code for a blank space is ALT+255)
+
+
+
+################## Copy from here --- This goes in to the file created in part 5. ("aosharpsettings" if you've followed along so far.)
+
+
+<center><img src=tdb://id:GFX_GUI_TOOLBAR_BUTTON_RIGHT_HILITE>  <font color="#FFBC47">AO Sharp Panel</font>  <img src=tdb://id:GFX_GUI_TOOLBAR_BUTTON_LEFT_HILITE><br><br>
+<a href='chatcmd:///start https://discord.gg/UyVD7C9'>AOSharp Discord</a>
+<a href="chatcmd:///macro SETTINGS /aosharpsettings">Create macro</a> to open this window<br>
+<img src=rdb://294426></center>
+<font color="Yellow">Asks NT and Fixer at ICC grid for buffs</font>
+<a href='chatcmd:///tell Fixerlub yep\n /tell Nanotechlub yep'>Fixer and NT lub</a>
+
+<font color="Yellow">Light Settings, same as !light in guildbot</font>
+<a href='chatcmd:///fxscript Tweak_Rubi-Ka_SunLight #'>RKLight</a> | <a href='chatcmd:///fxscript Tweak_Shadowlands_SunLight #'>SLBasicLight</a> | <a href='chatcmd:///fxscript Tweak_Shadowlands_SunLight_Caustics #'>CausticsLight</a> | <a href='chatcmd:///fxscript Tweak_Shadowlands_SunLight_Penumbra #'>PenumbraLight</a>
+<a href='chatcmd:///fxscript Tweak_Shadowlands_SunLight_Lavaland #'>InfernoLight</a> | <a href='chatcmd:///fxscript Tweak_Shadowlands_SunLight_Pandemonium #'>PandemoniumLight</a> | <a href='chatcmd:///fxscript Tweak_Outerspace_SunLight #'>GlobalLight</a> 
+
+<font color="Yellow">Character View and and View Distance (F10 - Video - Video Settings)</font>
+<a href='chatcmd:///char&viewdist 100 100'>100% / 100%</a><font color="Gray"> | </font><a href='chatcmd:///char&viewdist 80 80'>80% / 80%</a><font color="Gray"> | </font><a href='chatcmd:///char&viewdist 60 60'>60% / 60%</a><font color="Gray"> | </font><a href='chatcmd:///char&viewdist 40 40'>40% / 40%</a><font color="Gray"> | </font><a href='chatcmd:///char&viewdist 20 20'>20% / 20%</a>
+
+ <a href="text://<div align=center> <img src=tdb://id:GFX_GUI_OPTION_SLIDER>
+
+<a href='chatcmd:///lft <font color=Yellow>Over here!'>Set Char LFT</a> or <a href='chatcmd:///lft'>Toggle /LFT</a>
+
+Switch Mouse Functionality: <a href='chatcmd:///setoption UseNewMouseFunc 1'>On</a> | <a href='chatcmd:///setoption UseNewMouseFunc 0'>Off</a>
+Mouse-look sensitivity: <a href='chatcmd:///setoption MouseTurnSensitivity 2.5'>2.5</a>|<a href='chatcmd:///setoption MouseTurnSensitivity 3.'>3.5</a>|<a href='chatcmd:///setoption MouseTurnSensitivity 5'>5</a>
+Number of Hotbars: <a href='chatcmd:///setoption NumHotbars 1'>1</a>|<a href='chatcmd:///setoption NumHotbars 2'>2</a>|<a href='chatcmd:///setoption NumHotbars 3'>3</a>|<a href='chatcmd:///setoption NumHotbars 4'>4</a>
+Show Targets Target: <a href='chatcmd:///setoption Targetstarget 1'>On</a>|<a href='chatcmd:///setoption Targetstarget 0'>Off</a>
+Show Target NCU: <a href='chatcmd:///setoption Targetstarget 1'>On</a>|<a href='chatcmd:///setoption Targetstarget 0'>Off</a>
+Show Nano Target NCU: <a href='chatcmd:///setoption ShowNanoTargetNCU 1'>On</a>|<a href='chatcmd:///setoption ShowNanoTargetNCU 0'>Off</a>
+Show Fight Target NCU: <a href='chatcmd:///setoption ShowFightTargetNCU 1'>On</a>|<a href='chatcmd:///setoption ShowFightTargetNCU 0'>Off</a>
+Switch Mouse Functionality: <a href='chatcmd:///setoption UseNewMouseFunc 1'>On</a>|<a href='chatcmd:///setoption UseNewMouseFunc 0'>Off</a>
+
+
+<center>### Low quality gfx for alt chars###</center>
+Show all Video Effects: <a href='chatcmd:///setoption ToggleAllEffects 1'>On</a>|<a href='chatcmd:///setoption ToggleAllEffects 0'>Off</a>
+Compressed Textures: <a href='chatcmd:///setoption DisplayCompressedTextures 1'>On</a>|<a href='chatcmd:///setoption DisplayCompressedTextures 0'>Off</a>
+Texture Resolution: <a href='chatcmd:///setoption DisplayOtherTextureQuality 1'>Low</a>|<a href='chatcmd:///setoption DisplayOtherTextureQuality 2'>Med</a>|<a href='chatcmd:///setoption DisplayOtherTextureQuality 3'>Full</a>
+Texture ColorDepth: <a href='chatcmd:///setoption DisplayTextureResolution 0'>Low</a>|<a href='chatcmd:///setoption DisplayTextureResolution 1'>Med</a>|<a href='chatcmd:///setoption DisplayTextureResolution 2'>Full</a>
+GroundTextureResolution: <a href='chatcmd:///setoption GroundTextureQuality 0'>16bit</a>|<a href='chatcmd:///setoption GroundTextureQuality 1'>16/32bit</a>|<a href='chatcmd:///setoption GroundTextureQuality11 2'>32bit</a>
+GroundQuality: <a href='chatcmd:///setoption DisplayGroundQuality 100'>100</a>|<a href='chatcmd:///setoption DisplayGroundQuality 150'>150</a>|<a href='chatcmd:///setoption DisplayGroundQuality 200'>200</a>
+GroundFullQualRadius: <a href='chatcmd:///setoption DisplayGroundFullQualityRadius 7'>7%</a>|<a href='chatcmd:///setoption DisplayGroundFullQualityRadius 25'>25%</a>|<a href='chatcmd:///setoption DisplayGroundFullQualityRadius 44'>44%</a>
+
+
+
+<a href='chatcmd:///aosharpsettings'><img src=rdb://294426><br>Return to AOSharp Panel
+
+<img src=tdb://id:GFX_GUI_OPTION_SLIDER>">Enter SubMenu with more options</a></font>
+
+<font color="Lime">IPC Channels for different handlers, important: these affect performance</font>
+* Class handler:<font color="Lime">           7</font>
+* Sync Manager: <font color="Lime">         8</font>
+* ATK/DEFbuddy:<font color="Lime">         9</font>
+* Others (helpmgr etc)<font color="Lime"> 10-20</font>
+
+
+<font color="Yellow">Handlers and Buddies</font>
+    Create <a href="chatcmd:///macro Handler /handler">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///handler">Open Window</a><font color="Gray"> | </font> Class Handler
+    Create <a href="chatcmd:///macro Sync /syncmanager">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///syncmanager">Open Window</a><font color="Gray"> | </font> SyncManager
+    Create <a href="chatcmd:///macro Help /helpmanager">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///helpmanager">Open Window</a><font color="Gray"> | </font> HelpManager
+    Create <a href="chatcmd:///macro PET /petmanager">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///petmanager">Open Window</a><font color="Gray"> | </font> PetManager
+
+    Create <a href="chatcmd:///macro ATKB /attackbuddy">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///attackbuddy">Open Window</a><font color="Gray"> | </font> AttackBuddy
+    Create <a href="chatcmd:///macro DEFB /defendbuddy">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///defendbuddy">Open Window</a><font color="Gray"> | </font> DefendBuddy
+    Create <a href="chatcmd:///macro Buddy /buddy">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///buddy">Toggle Buddy</a><font color="Gray"> | </font> Toggle active Buddy
+
+    Create <a href="chatcmd:///macro FLLW /followmanager">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///followmanager">Open Window</a><font color="Gray"> | </font> FollowManager
+    Create <a href="chatcmd:///macro LOOT /lootmanager">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///lootmanager">Open Window</a><font color="Gray"> | </font> Lootmanager
+    Create <a href="chatcmd:///macro RSRCH /researchmanager">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///researchmanager">Open Window</a><font color="Gray"> | </font> ResearchManager
+    Create <a href="chatcmd:///macro MAIL /mailmanager">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///mailmanager">Open Window</a><font color="Gray"> | </font> MailManager
+    Create <a href="chatcmd:///macro GMI /gmimanager">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///gmimanager">Open Window</a><font color="Gray"> | </font> GMIManager
+    Create <a href="chatcmd:///macro AssM /assistmanager">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///assistmanager">Open Window</a><font color="Gray"> | </font> AssistManager
+
+<font color="Yellow">XP/Farm buddies</font>    
+    Create <a href="chatcmd:///macro InfB /infbuddy">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///infbuddy">Open Window</a><font color="Gray"> | </font> InfBuddy
+    Create <a href="chatcmd:///macro OsBud /osbuddy">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///osbuddy">Open Window</a><font color="Gray"> | </font> OSBuddy
+    Create <a href="chatcmd:///macro AXPB /axpbuddy">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///axpbuddy">Open Window</a><font color="Gray"> | </font> AXPbuddy (sector 13)
+    Create <a href="chatcmd:///macro KHBud /khbuddy">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///khbuddy">Open Window</a><font color="Gray"> | </font> KHBuddy (Kite Hill)
+    Create <a href="chatcmd:///macro CITY /citybuddy">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///citybuddy">Open Window</a><font color="Gray"> | </font> CityBuddy
+<font color="Gray">* Only one buddy should be activated at the same time <br> (AXPBuddy, Citybuddy, Infbuddy etc.(Attackbuddy works with some others))</font>
+
+<font color="Yellow">SyncManager specific commands</font>
+    Create <a href="chatcmd:///macro MOVE /syncmove">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///syncmove">Open Window</a><font color="Gray"> | </font> Toggle Sync Move
+    Create <a href="chatcmd:///macro USE /syncuse">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///syncuse">Open Window</a><font color="Gray"> | </font> Toggle Sync Use Items
+    Create <a href="chatcmd:///macro TRADE /synctrade">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///synctrade">Open Window</a><font color="Gray"> | </font> Toggle Sync Trade
+    Create <a href="chatcmd:///macro CHAT /syncchat">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///syncchat">Open Window</a><font color="Gray"> | </font> Toggle Sync Chat (with npc)
+    Create <a href="chatcmd:///macro BAGS /syncbags">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///syncbags">Open Window</a><font color="Gray"> | </font> Toggle Sync Bags
+
+<font color="Yellow">Miscellaneous Commands:</font>
+    Create <a href="chatcmd:///macro REBUFF /rebuff">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///rebuff">Open Window</a><font color="Gray"> | </font> Clear NCU and Rebuff
+    Create <a href="chatcmd:///macro SIT /autosit">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///autosit">Open Window</a><font color="Gray"> | </font> Toggle Auto Sit
+    Create <a href="chatcmd:///macro YALM /yalm">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///yalm">Open Window</a><font color="Gray"> | </font> Yalm/Phasefront Flight
+    Create <a href="chatcmd:///macro TEAM /form">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///form">Open Window</a><font color="Gray"> | </font> Form Team with injected chars
+    Create <a href="chatcmd:///macro DISBAND /disband">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///disband">Open Window</a><font color="Gray"> | </font> Disband team with injected chars
+    Create <a href="chatcmd:///macro REFORM /reform">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///reform">Open Window</a><font color="Gray"> | </font> Reform TEAM with injected chars
+    Create <a href="chatcmd:///macro Conv /convert">Macro?</a><font color="Gray"> | </font> <a href="chatcmd:///convert">Open Window</a><font color="Gray"> | </font> Convert to Raid
+

@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<Root>
+	<View>
+		<BorderView>
+			<BorderView view_layout="horizontal" layout_borders="Rect(4,4,4,0)">
+				<HLayoutSpacer/>
+				<TextView value="Roamba Path Editor" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00" layout_borders="Rect(4,4,4,4)"/>
+				<HLayoutSpacer/>
+			</BorderView>
+			<View layout_borders="Rect(4,0,4,0)" view_layout="horizontal">
+				<View>
+					<BorderView view_layout="horizontal" layout_borders="Rect(0,4,0,0)">
+						<HLayoutSpacer/>
+						<TextView layout_borders="Rect(4,4,4,4)" value="Path Editing" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+						<HLayoutSpacer/>
+					</BorderView>
+					<BorderView layout_borders="Rect(0,4,0,4)">
+						<View view_layout="horizontal" layout_borders="Rect(4,4,4,4)">
+							<HLayoutSpacer/>
+							<TextView layout_borders="Rect(15,0,0,0)"  value="Core" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+							<HLayoutSpacer/>
+							<Button name="CoreInfo"/>
+						</View>
+						<BorderView>
+							<View layout_borders="Rect(8,8,8,8)">
+								<Button min_size="Point(104,-1)" name="AddPoint" label="Add Point"/>
+								<Button min_size="Point(104,-1)" name="RemovePoint" label="Remove Point"/>
+								<Button min_size="Point(104,-1)" name="ReversePath" label="Reverse Path"/>
+								<Button min_size="Point(104,-1)" name="SplitPath" label="Split Path"/>
+								<Button min_size="Point(104,-1)" name="RunPath" label="Test / Stop"/>
+							</View>
+						</BorderView>
+					</BorderView>
+					<BorderView layout_borders="Rect(0,0,0,4)">
+						<View view_layout="horizontal" layout_borders="Rect(4,4,4,4)">
+							<HLayoutSpacer/>
+							<TextView layout_borders="Rect(15,0,0,0)"  value="Editing" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+							<HLayoutSpacer/>
+							<Button name="EditingInfo"/>
+						</View>
+						<BorderView>
+							<View layout_borders="Rect(8,8,8,8)">
+								<Button min_size="Point(104,-1)" name="PickupPoint" label="Pickup Point"/>
+								<Button min_size="Point(104,-1)" name="PlacePoint" label="Place Point"/>
+							</View>
+						</BorderView>
+					</BorderView>
+					<BorderView layout_borders="Rect(0,0,0,4)">
+						<View view_layout="horizontal" layout_borders="Rect(4,4,4,4)">
+							<HLayoutSpacer/>
+							<TextView layout_borders="Rect(15,0,0,0)"  value="Misc" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+							<HLayoutSpacer/>
+							<Button name="MiscInfo"/>
+						</View>
+						<BorderView>
+							<View layout_borders="Rect(8,8,8,8)">
+								<Button min_size="Point(104,-1)" name="ToggleLock" label="Toggle Lock"/>
+								<Button min_size="Point(104,-1)" name="ToggleLoop" label="Toggle Loop"/>
+								<Button min_size="Point(104,-1)" name="ClearPath" label="Clear Path"/>
+							</View>
+						</BorderView>
+					</BorderView>
+					<BorderView layout_borders="Rect(0,0,0,4)">
+						<View view_layout="horizontal" layout_borders="Rect(4,4,4,4)">
+							<HLayoutSpacer/>
+							<TextView layout_borders="Rect(15,0,0,0)"  value="Info" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+							<HLayoutSpacer/>
+							<Button name="InfoInfo"/>
+						</View>
+						<BorderView>
+							<View layout_borders="Rect(8,8,8,8)">
+								<View view_layout="horizontal">
+									<TextView min_size="Point(75,-1)" value="Points:"/>
+									<HLayoutSpacer/>
+									<TextView name="Points"/>
+								</View>
+								<View view_layout="horizontal">
+									<TextView min_size="Point(75,-1)" value="Reversed:"/>
+									<HLayoutSpacer/>
+									<TextView name="IsReversed"/>
+								</View>
+								<View view_layout="horizontal">
+									<TextView min_size="Point(75,-1)" value="Loop:"/>
+									<HLayoutSpacer/>
+									<TextView name="IsLooping"/>
+								</View>
+								<View view_layout="horizontal">
+									<TextView min_size="Point(75,-1)" value="Locked:"/>
+									<HLayoutSpacer/>
+									<TextView name="IsLocked"/>
+								</View>
+								<View view_layout="horizontal">
+									<TextView min_size="Point(75,-1)" value="Playfield:"/>
+									<HLayoutSpacer/>
+									<TextView name="Playfield"/>
+								</View>
+							</View>
+						</BorderView>
+					</BorderView>
+				</View>
+				<View layout_borders="Rect(4,0,0,0)">
+					<BorderView view_layout="horizontal" layout_borders="Rect(0,4,0,0)">
+						<HLayoutSpacer/>
+						<TextView layout_borders="Rect(4,4,4,4)" value="Targeting Rules" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+						<HLayoutSpacer/>
+					</BorderView>
+					<BorderView layout_borders="Rect(0,4,0,4)">
+						<BorderView min_size="Point(153,-1)">
+							<View view_layout="horizontal" layout_borders="Rect(4,4,4,4)">
+								<HLayoutSpacer/>
+								<TextView layout_borders="Rect(15,0,0,0)"  value="Ignored Names" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+								<HLayoutSpacer/>
+								<Button name="IgnoredNamesInfo"/>
+							</View>
+						</BorderView>
+						<TextView layout_borders="Rect(8,8,8,8)" name="IgnoredNames" min_size="Point(153,186)" feature_flags="TVF_MULTILINE|TVF_ALT_ENTER_MODE|TVF_ACCEPT_TXT_INPUT|TVF_ACCEPT_MOUSE_INPUT|TVF_RENDER_SHADOW"/>
+					</BorderView>
+
+					<BorderView layout_borders="Rect(0,0,0,4)">
+						<BorderView min_size="Point(153,-1)">
+							<View view_layout="horizontal" layout_borders="Rect(4,4,4,4)">
+								<HLayoutSpacer/>
+								<TextView layout_borders="Rect(15,0,0,0)"  value="Priority Names" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+								<HLayoutSpacer/>
+								<Button name="PriorityNamesInfo"/>
+							</View>
+						</BorderView>
+						<TextView layout_borders="Rect(8,8,8,8)" name="PriorityNames" min_size="Point(153,187)" feature_flags="TVF_MULTILINE|TVF_ALT_ENTER_MODE|TVF_ACCEPT_TXT_INPUT|TVF_ACCEPT_MOUSE_INPUT|TVF_RENDER_SHADOW"/>
+					</BorderView>
+				</View>
+			</View>
+			<BorderView layout_borders="Rect(4,0,4,4)">
+				<View layout_borders="Rect(8,8,8,8)" view_layout="horizontal">
+					<HLayoutSpacer/>
+					<View>
+						<View view_layout="horizontal" layout_borders="Rect(0,0,0,8)">
+							<HLayoutSpacer/>
+							<TextView layout_borders="Rect(15,0,0,0)" value="Export / Save" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+							<HLayoutSpacer/>
+							<Button name="ExportSaveInfo" layout_borders="Rect(4,0,0,0)"/>
+						</View>						
+						<View view_layout="horizontal">
+							<TextInputView name="FileName" min_size="Point(127,16)" max_size="Point(127,16)" layout_borders="Rect(0,0,10,0)"/>
+							<HLayoutSpacer/>
+							<Button min_size="Point(50,-1)" name="Save" label="Save"/>
+							<Button min_size="Point(25,-1)" name="Close" label="Close" layout_borders="Rect(2,0,2,0)"/>
+						</View>
+					</View>
+					<HLayoutSpacer/>
+				</View>
+
+			</BorderView>
+		</BorderView>
+	</View>
+</Root>

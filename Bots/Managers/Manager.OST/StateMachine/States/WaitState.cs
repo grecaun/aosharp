@@ -1,0 +1,104 @@
+﻿using AOSharp.Common.GameData;
+using AOSharp.Core;
+using AOSharp.Core.Movement;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace ManagerOST
+{
+    public class WaitState : IState
+    {
+        public const double RefreshMongoTime = 8f;
+        public const double RefreshAbsorbTime = 11f;
+
+        public double _timer;
+        public double _refreshMongoTimer;
+        public double _refreshAbsorbTimer;
+
+        public SimpleChar LeaderChar;
+        Spell absorb = null;
+
+
+        public IState GetNextState()
+        {
+            if (DynelManager.LocalPlayer.Profession == Profession.Enforcer)
+            {
+                if (!ManagerOST.Toggle)
+                {
+                    MovementController.Instance.Halt();
+                    return new IdleState();
+                }
+
+                if (Time.AONormalTime > _timer + ManagerOST.Config.CharSettings[DynelManager.LocalPlayer.Name].RespawnDelay && ManagerOST.MobsAllDead)
+                {
+                    ManagerOST.MobsAllDead = false;
+                    return new PullState();
+                }
+            }
+
+            return null;
+        }
+
+        public void OnStateEnter()
+        {
+            //Chat.WriteLine("NukeState::OnStateEnter");
+        }
+
+        public void OnStateExit()
+        {
+            //Chat.WriteLine("NukeState::OnStateExit");
+        }
+
+        public void Tick()
+        {
+            if (ManagerOST._waypoints.Count >= 1)
+            {
+                foreach (Vector3 pos in ManagerOST._waypoints)
+                {
+                    Debug.DrawSphere(pos, 0.2f, DebuggingColor.White);
+                }
+            }
+
+            if (DynelManager.LocalPlayer.Profession == Profession.Enforcer)
+            {
+                if (absorb == null)
+                    absorb = Spell.List.Where(x => x.Nanoline == NanoLine.AbsorbACBuff).OrderBy(x => x.StackingOrder).FirstOrDefault();
+
+                List<SimpleChar> mobsatend = DynelManager.NPCs
+                    .Where(x => x.DistanceFrom(DynelManager.LocalPlayer) <= 43f
+                        && x.IsAlive && x.FightingTarget != null
+                        && x.Position.DistanceFrom(ManagerOST._waypoints.Last()) < 10f)
+                    .ToList();
+
+                List<Corpse> mobsatenddead = DynelManager.Corpses
+                    .Where(x => x.DistanceFrom(DynelManager.LocalPlayer) <= 43f
+                        && x.Position.DistanceFrom(ManagerOST._waypoints.Last()) < 10f)
+                    .ToList();
+
+                if (mobsatend.Count == 0 && mobsatenddead.Count >= 1 && !ManagerOST.MobsAllDead)
+                {
+                    _timer = Time.AONormalTime;
+                    ManagerOST.MobsAllDead = true;
+                }
+
+                if (mobsatend.Count >= 1)
+                {
+                    Spell mongobuff = Spell.GetSpellsForNanoline(NanoLine.MongoBuff).OrderByStackingOrder().FirstOrDefault();
+
+                    if (mongobuff == null) { return; }
+
+                    if (!Spell.HasPendingCast && mongobuff.IsReady && Time.AONormalTime > _refreshMongoTimer + RefreshMongoTime)
+                    {
+                        mongobuff.Cast();
+                        _refreshMongoTimer = Time.AONormalTime;
+                    }
+                    if (!Spell.HasPendingCast && absorb.IsReady && Time.AONormalTime > _refreshAbsorbTimer + RefreshAbsorbTime)
+                    {
+                        absorb.Cast();
+                        _refreshAbsorbTimer = Time.AONormalTime;
+                    }
+                }
+            }
+        }
+    }
+}

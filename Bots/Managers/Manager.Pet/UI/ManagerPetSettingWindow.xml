@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="Helper" layout_borders="Rect(5,5,5,5)" max_size="Point(16000,-1)">
+		<TextView value="" layout_borders="Rect(5,5,5,5)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<Button name="ManagerPetInfoView" label="Info" layout_borders="Rect(5,5,3,5)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value="" layout_borders="Rect(0,0,0,2)"/>
+		<Button name="SyncPets_Disable_Button" label="" layout_borders="Rect(5,0,5,5)" max_size="Point(100,20)"/>
+		<TextView value="" layout_borders="Rect(0,0,0,2)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value="" layout_borders="Rect(5,5,5,5)"/>
+		<Button name="PetAttack" label="Attack" layout_borders="Rect(5,5,3,5)"/>
+		<Button name="PetWait" label="Wait" layout_borders="Rect(5,5,3,5)"/>
+		<Button name="PetWarp" label="Warp" layout_borders="Rect(5,5,3,5)"/>
+		<Button name="PetFollow" label="Follow" layout_borders="Rect(5,5,3,5)"/>
+		<TextView value="" layout_borders="Rect(5,5,5,5)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value="" layout_borders="Rect(5,5,5,5)"/>
+
+		<TextView value="" layout_borders="Rect(0,0,0,2)"/>
+		<TextView name="VersionNumber" value="" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="" layout_borders="Rect(0,0,0,2)"/>
+	</BorderView>
+</root>

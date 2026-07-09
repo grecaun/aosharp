@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<View view_layout="vertical">
+		<View view_layout="horizontal">
+			<HLayoutSpacer/>
+			<View layout_borders="Rect(3,8,0,3)" view_layout="horizontal">
+				<TextView value="Name:" layout_borders="Rect(5,5,5,0)" />
+				<TextInputView name="HelperNameBox" max_size="Point(150,15)" min_size="Point(150,15)" layout_borders="Rect(5,5,5,0)" />
+				<Button name="ManagerAttackAddHelper" label="Add" layout_borders="Rect(5,5,5,0)"/>
+			</View>
+			<HLayoutSpacer/>
+		</View>
+
+		<View view_layout="horizontal">
+			<HLayoutSpacer/>
+			<View layout_borders="Rect(3,8,0,3)" view_layout="horizontal">
+				<DropdownMenu name="Dropdown" layout_borders="Rect(5,5,5,0)" />
+				<Button name="ManagerAttackRemoveHelper" label="Remove" layout_borders="Rect(5,5,5,0)"/>
+				<Button name="ManagerAttackClearHelpers" label="Clear" layout_borders="Rect(5,5,5,0)"/>
+			</View>
+			<HLayoutSpacer/>
+		</View>
+
+		<View view_layout="horizontal">
+			<HLayoutSpacer/>
+			<TextView value="You can also add names by targeting a character and clicking Add." layout_borders="Rect(5,5,5,5)" />
+			<HLayoutSpacer/>
+		</View>
+	</View>
+</root>

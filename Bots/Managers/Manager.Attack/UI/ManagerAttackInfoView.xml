@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="ManagerAttackInfo" layout_borders="Rect(0,0,0,2)" max_size="Point(16000,-1)">
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Enable - Turns the bot on or off." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+
+		<TextView value="Team Lead - Should be checked if you are team leader or solo." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Switch to mobs attacking team (not you) - Switches to mobs attacking teammates but not you." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+
+		<TextView value="Taunt Enable - Toggles taunting. Enables taunt range input if on." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Show Range - Displays red (attack) and green (taunt) rings on the ground." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+
+		<TextView value="Attack Range - Max range for attacking mobs." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Taunt Range - Max range for taunting mobs. Must be greater than attack range." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Set Range - Applies the attack and taunt range values." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+
+		<TextView value="Assist - Opens a window to set assist targets (players, pets, npcs)." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Advanced Setting - Opens a window with advanced settings." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+
+		<TextView value="Target Priority:" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="1. Assist target" layout_borders="Rect(5,0,0,2)"/>
+		<TextView value="2. Mobs attacking team (not you)" layout_borders="Rect(5,0,0,2)"/>
+		<TextView value="3. Switch order mobs" layout_borders="Rect(5,0,0,2)"/>
+		<TextView value="4. Regular mobs" layout_borders="Rect(5,0,0,2)"/>
+		<TextView value="5. Bosses" layout_borders="Rect(5,0,0,2)"/>
+
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+	</BorderView>
+</root>

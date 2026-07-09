@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+  <BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="Info" layout_borders="Rect(0,0,0,2)" max_size="Point(16000,-1)">
+    <TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+	  <BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(0,0,0,2)"/>
+	  <TextView Name ="PluginName" value="" layout_borders="Rect(0,0,0,2)"/>
+	  <TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+	  <BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(0,0,0,2)"/>
+	  <TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+	  <TextView value="Inject this Automaton and the matching profession Handlers on each character." layout_borders="Rect(0,0,0,2)"/>
+	  <TextView value="Do NOT inject any other Automaton or anything that controls attacking or pathing." layout_borders="Rect(0,0,0,2)"/>
+	  <TextView value="Do NOT use Managers: Attack, Assist, Follow, Help, Pet Hunt, or Sync." layout_borders="Rect(0,0,0,2)"/>
+	  <TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+	  <BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(0,0,0,2)"/>
+    <TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+  </BorderView>
+</root>

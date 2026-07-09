@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="Center" view_layout="Vertical" name="YalmSettings" layout_borders="Rect(0,0,0,2)" max_size="Point(16000,-1)">
+		<TextView value="RK Selection:" layout_borders="Rect(0,5,0,0)" />
+		<DropdownMenu name="RKYalms" layout_borders="Rect(0,0,0,5)" />
+
+		<TextView value="SL Selection:" layout_borders="Rect(0,5,0,0)" />
+		<DropdownMenu name="SLYalms" layout_borders="Rect(0,0,0,5)" />
+
+		<TextView value="command: /fly" layout_borders="Rect(0,5,0,5)" />
+
+		<Button name="Save" label="Save" layout_borders="Rect(0,5,0,2)"/>
+		
+		<Button name="BroadcastYalm" label="Broadcast Saved Settings" layout_borders="Rect(0,2,0,5)"/>
+		
+	</BorderView>
+</root>

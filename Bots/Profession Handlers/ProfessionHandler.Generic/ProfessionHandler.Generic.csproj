@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CB8419F-3914-49C1-ABA3-78C5D26E8E48}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProfessionHandler.Generic</RootNamespace>
+    <AssemblyName>ProfessionHandler.Generic</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AOSharp.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AOSharpSDK.1.0.106\lib\net48\AOSharp.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="AOSharp.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AOSharpSDK.1.0.106\lib\net48\AOSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ammo.cs" />
+    <Compile Include="Base\ProfessionHandler.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="GenericProfessionHandler.cs" />
+    <Compile Include="GetBehind.cs" />
+    <Compile Include="IPCMessages.cs" />
+    <Compile Include="ItemPerkProcessors\ItemProcessors.cs" />
+    <Compile Include="ItemPerkProcessors\ProcProcessors.cs" />
+    <Compile Include="ItemPerkProcessors\TrimmerProcessors.cs" />
+    <Compile Include="Base\Settings.cs" />
+    <Compile Include="ResetUI.cs" />
+    <Compile Include="SpecialAttacks.cs" />
+    <Compile Include="Spell Processors\CombatBuffProcessors.cs" />
+    <Compile Include="Spell Processors\PetBuffProcessors.cs" />
+    <Compile Include="Spell Processors\BlankProcessors.cs" />
+    <Compile Include="Spell Processors\DebuffProcessors.cs" />
+    <Compile Include="Spell Processors\HoldsProcessors.cs" />
+    <Compile Include="Spell Processors\DebuffRemoverProcessors.cs" />
+    <Compile Include="Spell Processors\CratPetsList.cs" />
+    <Compile Include="Spell Processors\EngiePetsList.cs" />
+    <Compile Include="Spell Processors\SpellIDs.cs" />
+    <Compile Include="Spell Processors\TauntProcessors.cs" />
+    <Compile Include="Spell Processors\BuffProcessors.cs" />
+    <Compile Include="Spell Processors\HealProcessors.cs" />
+    <Compile Include="Spell Processors\NukeProcessors.cs" />
+    <Compile Include="ItemPerkProcessors\PerkProcessors.cs" />
+    <Compile Include="UI\GenericWindowController.cs" />
+    <Compile Include="UI\HandlerMainWindow\Button Clicked\ButtonClicked.cs" />
+    <Compile Include="UI\Items\TrimmerWindowController.cs" />
+    <Compile Include="UI\Items\MAAttacksWindowController.cs" />
+    <Compile Include="UI\Perks\ProcsWindowController.cs" />
+    <Compile Include="UI\Perks\PerksWindowController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Spell Processors\SpellProcessors.cs" />
+    <Compile Include="UI\Items\ItemsWindowController.cs" />
+    <Compile Include="UI\Spells\FPBuffWindowController.cs" />
+    <Compile Include="UI\Spells\BuffWindowController.cs" />
+    <Compile Include="UI\Spells\TauntWindowController.cs" />
+    <Compile Include="UI\Spells\HealWindowController.cs" />
+    <Compile Include="UI\Spells\DebuffWindowController.cs" />
+    <Compile Include="UI\Spells\HoldWindowController.cs" />
+    <Compile Include="UI\Spells\PetBuffWindowController.cs" />
+    <Compile Include="UI\Spells\NukeWindowController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UI\BuffWindow.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HandlerMainWindow\AdvMorphView.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\ScrollViewLayouts\CenteredButtonWithText.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\ScrollViewLayouts\DropDownInputBox.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\ScrollViewLayouts\DropDownInputBoxDropDown.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\ScrollViewLayouts\DropDownWithCheckBox.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\PetWindow.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HandlerMainWindow\ErrorRow.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HandlerMainWindow\PetCommandView.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HandlerMainWindow\DynamicButtons\DualButtonRow.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HandlerMainWindow\DynamicButtons\SingleButtonRow.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\GenericWindow.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HandlerMainWindow\OptionalRow\HandlerAddRow.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HandlerMainWindow\HandlerInfoWindow.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HandlerMainWindow\HandlerMainWindow.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\ScrollViewLayouts\EntryDropDown.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\ScrollViewLayouts\EntryCheckbox.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\ScrollViewLayouts\CenteredLabelOnly.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\ScrollViewLayouts\DualEntryDropDown.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\ScrollViewLayouts\EntryLabelOnly.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\ScrollViewLayouts\ThreeEntryDropDown.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\ScrollViewLayouts\EntryRadioGroup.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\ScrollViewLayouts\EntryTextInput.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\ScrollViewLayouts\OptionalVeiw.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\ScrollViewLayouts\WindowColumn.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\ScrollViewLayouts\WindowRow.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Shared.csproj">
+      <Project>{9368d47e-1f6f-4904-95d6-b18579c59d5e}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bosses.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

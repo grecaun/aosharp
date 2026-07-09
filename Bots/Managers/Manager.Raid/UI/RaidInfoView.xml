@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="Info" layout_borders="Rect(0,0,0,2)" max_size="Point(16000,-1)">
+		<TextView value="ManagerRaid Plugin Instructions" layout_borders="Rect(0,0,0,2)" />
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value="1. Use /ManagerRaid to open or close the UI." layout_borders="Rect(0,0,0,2)" />
+		<TextView value="2. Select a nearby player from the 'Player' dropdown." layout_borders="Rect(0,0,0,2)" />
+		<TextView value="3. Click 'Add' to save them to your invite list." layout_borders="Rect(0,0,0,2)" />
+		<TextView value="4. Click 'Invite' to invite all saved players to your team or raid." layout_borders="Rect(0,0,0,2)" />
+		<TextView value="5. Use 'Remove' to delete one, or 'Clear' to reset the list." layout_borders="Rect(0,0,0,2)" />
+		<TextView value="6. Must be in a team before inviting." layout_borders="Rect(0,0,0,2)" />
+		<TextView value="7. Player list is saved to disk and auto-loaded on startup." layout_borders="Rect(0,0,0,2)" />
+	</BorderView>
+</root>

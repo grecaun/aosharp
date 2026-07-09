@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<View>
+		<BitmapView name="Background" view_layout="horizontal">
+			<TextView layout_borders="Rect(6,0,0,0)" value="Total:" font="BOLD" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+			<HLayoutSpacer/>
+			<TextView name="TotalValue" layout_borders="Rect(0,0,3,0)" value="69.3M (3.8m)" font="BOLD" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+		</BitmapView>
+	</View>
+</root>

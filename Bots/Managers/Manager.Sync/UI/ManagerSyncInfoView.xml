@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="Info" layout_borders="Rect(0,0,0,2)" max_size="Point(16000,-1)">
+
+		<BorderView view_layout="vertical" layout_borders="Rect(5,5,5,5)">
+			<TextView value="Instructions:" layout_borders="Rect(5,5,5,5)"/>
+			<TextView value="Select which features you want to sync. Clicking Broadcast sends your current ON/OFF choices" layout_borders="Rect(5,5,5,0)"/>
+			<TextView value="for Attack, Movement, Use, Bags, Trade, NPC Chat, and NPC Trade to all characters." layout_borders="Rect(5,0,5,5)"/>
+			<TextView value="Do NOT use ManagerSync with bots that handle pathing, attacking, or NPC chats:" layout_borders="Rect(5,5,5,5)"/>
+			<TextView value="Automaton.City, Automaton.DB1, Automaton.DB2, Automaton.Inf, Automaton.KH, Automaton.Mitaar," layout_borders="Rect(5,5,5,0)"/>
+			<TextView value="Automaton.Roamba, Automaton.Vortexx, AIMission.Bot, S13.Bot, LeBuddy, S13AXPFarmer." layout_borders="Rect(5,0,5,5)"/>
+			<TextView value="Outside Invites – Allows invites from players outside Your local team." layout_borders="Rect(5,5,5,5)"/>
+		</BorderView>
+
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+
+		<BorderView view_layout="vertical" layout_borders="Rect(5,5,5,5)">
+			<TextView value="Broadcast Settings:" layout_borders="Rect(5,5,5,5)"/>
+			<TextView value="Attack – Makes other characters attack the same target as the driver." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="Movement – Makes other characters follow the driver's movements." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="Use – Syncs using items, including items used on targets." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="Bags – When Use is enabled, also uses items in bags named 'syncbag'." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="Trade – Auto-accepts trades from any player." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="NPC Chat – Syncs dialog choices when speaking to NPCs." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="NPC Trade – Syncs trading of items or credits to NPCs." layout_borders="Rect(10,2,5,2)"/>
+		</BorderView>
+
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+
+		<BorderView view_layout="vertical" layout_borders="Rect(5,5,5,5)">
+			<TextView value="Commands:" layout_borders="Rect(5,5,5,5)"/>
+			<TextView value="/ManagerSync – Opens or closes the ManagerSync UI." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="/sync – Enable/disable ManagerSync." layout_borders="Rect(10,2,5,2)"/>
+
+			<TextView value="/syncattack – Toggle sync attack. '/syncattack all' also broadcasts." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="/syncmove – Toggle sync movement. '/syncmove all' also broadcasts." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="/syncuse – Toggle sync use. '/syncuse all' also broadcasts." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="/syncbags – Toggle sync bags. '/syncbags all' also broadcasts." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="/synctrade – Toggle sync trade. '/synctrade all' also broadcasts." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="/syncchat – Toggle sync NPC chat. '/syncchat all' also broadcasts." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="/syncnpctrade – Toggle sync NPC trade. '/syncnpctrade all' also broadcasts." layout_borders="Rect(10,2,5,2)"/>
+
+			<TextView value="/logout – Logs all out." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="/logout PlayerName – Sends the command to that player to log out." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="/spreadem – Same as the Spread Out button." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="/form – Same as the Team button." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="/formraid – Forms a raid." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="/convert – Converts team to raid." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="/reform – Reforms team." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="/synclft [message] – leaves team (if in one), goes lft, turns outside invites on. [message optional]" layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="/ManagerSyncchannel – View or set IPC channel (default is 4)." layout_borders="Rect(10,2,5,2)"/>
+			<TextView value="Only change the channel if splitting your team into separate sync groups." layout_borders="Rect(15,2,5,5)"/>
+		</BorderView>
+
+	</BorderView>
+</root>

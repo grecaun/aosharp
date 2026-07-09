@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<Root>
+	<View>
+		<BorderView view_layout="horizontal" layout_borders="Rect(4,4,4,4)">
+			<View layout_borders="Rect(8,8,8,8)">
+				<View view_layout="horizontal" layout_borders="Rect(0,0,0,8)">
+					<HLayoutSpacer/>
+					<TextView value="- Welcome to Roamba! -" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00" layout_borders="Rect(4,4,4,4)"/>
+					<HLayoutSpacer/>
+				</View>
+				<View view_layout="horizontal">
+					<HLayoutSpacer/>
+					<TextView font="LARGE" value="This plugin is designed to help you with your everyday botting activities."/>
+					<HLayoutSpacer/>
+				</View>
+			</View>
+		</BorderView>
+		
+		<BorderView layout_borders="Rect(4,0,4,4)">
+			<View layout_borders="Rect(8,8,8,8)">
+				<View view_layout="horizontal">
+					<TextView value="Quick setup guide:" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+					<HLayoutSpacer/>
+				</View>
+				<View view_layout="horizontal" layout_borders="Rect(4,0,4,4)">
+					<View h_alignment="LEFT" layout_borders="Rect(8,8,8,8)">
+						<TextView font="LARGE" layout_borders="Rect(0,0,0,4)" value="- Setup a Path by clicking the Edit button under Path"/>
+						<TextView font="LARGE" layout_borders="Rect(0,0,0,4)" value="- Setup a Config by clicking the Edit button under Config"/>
+						<TextView font="LARGE" value="- Press Start and enjoy!"/>
+					</View>
+					<HLayoutSpacer/>
+				</View>
+			</View>
+		</BorderView>
+
+		<BorderView layout_borders="Rect(4,0,4,4)">
+			<View layout_borders="Rect(8,8,8,8)">
+				<View view_layout="horizontal">
+					<TextView value="Tips:" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00"/>
+					<HLayoutSpacer/>
+				</View>
+				<View view_layout="horizontal" layout_borders="Rect(4,0,4,4)">
+					<View h_alignment="LEFT" layout_borders="Rect(8,8,8,8)">
+						<TextView font="LARGE" layout_borders="Rect(0,0,0,4)" value="- Don't forget to save your changes after modifying config / paths"/>
+						<TextView font="LARGE" layout_borders="Rect(0,0,0,4)" value="- If 'Sync' option is checked each client would use the same config / path"/>
+						<TextView font="LARGE" layout_borders="Rect(0,0,0,4)" value="- 'Channel Id'is used to sync the 'Start' function across multiple clients"/>
+						<TextView font="LARGE" layout_borders="Rect(0,0,0,4)" value="- 'Start On Inject' is used to automatically start Roamba after injecting"/>
+						<TextView font="LARGE" layout_borders="Rect(0,0,0,4)" value="- 'Path To Corpses' option does not loot corpses (use a looting plugin)"/>
+						<TextView font="LARGE" layout_borders="Rect(0,0,0,4)" value="- Use 'Follow Target' if you run multiple toons with Roamba"/>
+						<TextView font="LARGE" layout_borders="Rect(0,0,0,4)" value="- If using sync movement type plugins, only use Roamba on your lead"/>
+						<TextView font="LARGE"  value="- Press the '?' next to various options to get more info about them"/>
+					</View>
+					<HLayoutSpacer/>
+				</View>
+			</View>
+		</BorderView>
+	</View>
+</Root>

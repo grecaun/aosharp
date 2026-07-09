@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="Center" view_layout="Vertical" name="AdvancedSettings" layout_borders="Rect(0,0,0,2)" max_size="Point(16000,-1)">
+
+		<BorderView v_alignment="TOP" h_alignment="Left" view_layout="Vertical" name="MobSettings"  max_size="Point(16000,-1)">
+			<OptionRadioButtonGroup label="Pandemonium" layout_borders="Rect(5,5,5,5)" opt_type="variant" opt_variable="ManagerAttack__Pandemonium">
+				<RadioButton label="Pink, Blue, Spider, Hiisi" value="0"/>
+				<RadioButton label="Pink, Spider, Blue, Hiisi" value="1"/>
+				<RadioButton label="Pink, Blue, Hiisi, Spider" value="2"/>
+				<RadioButton label="Hiisi, Blue, Spider, Pink" value="3"/>
+			</OptionRadioButtonGroup>
+
+			<OptionRadioButtonGroup label="12M" layout_borders="Rect(5,5,5,5)" opt_type="variant" opt_variable="ManagerAttack__12M">
+				<RadioButton label="Right Hand of Madness, Left Hand of Insanity, Deranged Xan" value="0"/>
+				<RadioButton label="Left Hand of Insanity, Right Hand of Madness, Deranged Xan" value="1"/>
+				<RadioButton label="Right Hand of Madness, Deranged Xan, Left Hand of Insanity" value="2"/>
+			</OptionRadioButtonGroup>
+		</BorderView>
+
+		<BorderView v_alignment="TOP" h_alignment="Center" view_layout="Vertical" name="TauntSettings"  max_size="Point(16000,-1)">
+
+			<View v_alignment="TOP" h_alignment="Center" view_layout="horizontal" layout_borders="Rect(2,2,2,2)" max_size="Point(16000,-1)">
+				<TextView value="If HP and/or NP drop below these setting, taunting/pulling will stop" layout_borders="Rect(5,0,5,5)" />
+				
+			</View>
+			
+			<View view_layout="horizontal">
+				<HLayoutSpacer/>
+				<View view_layout="horizontal">
+					<TextView value="Health:" layout_borders="Rect(2,2,2,2)"/>
+					<TextInputView name="KitHealthPercentageBox" min_size="Point(21,14)" max_size="Point(21,14)" layout_borders="Rect(2,2,2,2)"/>
+					<TextView value="Nano:" layout_borders="Rect(2,2,2,2)"/>
+					<TextInputView name="KitNanoPercentageBox" min_size="Point(21,14)" max_size="Point(21,14)" layout_borders="Rect(2,2,2,2)"/>
+					<Button name="Save_Button" label="Save"/>
+				</View>
+				<HLayoutSpacer/>
+			</View>
+
+		</BorderView>
+
+		<BorderView v_alignment="TOP" h_alignment="Center" view_layout="Vertical" name="MobSettings"  max_size="Point(16000,-1)">
+
+			<View view_layout="Center">
+				<TextView Name ="InstanceId" layout_borders="Rect(5,5,5,5)" />
+				<HLayoutSpacer/>
+			</View>
+			
+			<View view_layout="horizontal">
+				
+				<View layout_borders="Rect(3,8,0,3)" view_layout="horizontal">
+					<TextView value="Ignore Targets:" layout_borders="Rect(5,5,1,0)" />
+					<TextInputView name="IgnoreInput" max_size="Point(150,15)" min_size="Point(150,15)" layout_borders="Rect(5,5,5,0)" />
+					<DropdownMenu name="IgnoreDropdown" layout_borders="Rect(5,5,5,0)" />
+					<Button name="AddIgnore" label="Add" layout_borders="Rect(5,5,5,0)"/>
+					<Button name="RemoveIgnore" label="Remove" layout_borders="Rect(5,5,5,0)"/>
+				</View>
+				<HLayoutSpacer/>
+			</View>
+
+			<View view_layout="horizontal">
+
+				<View layout_borders="Rect(3,8,0,3)" view_layout="horizontal">
+					<TextView value="Switch Targets:" layout_borders="Rect(5,5,0,0)" />
+					<TextInputView name="SwitchInput" max_size="Point(150,15)" min_size="Point(150,15)" layout_borders="Rect(5,5,5,0)" />
+					<DropdownMenu name="SwitchDropdown" layout_borders="Rect(5,5,5,0)" />
+					<Button name="AddSwitch" label="Add" layout_borders="Rect(5,5,5,0)"/>
+					<Button name="RemoveSwitch" label="Remove" layout_borders="Rect(5,5,5,0)"/>
+				</View>
+				<HLayoutSpacer/>
+			</View>
+
+			<View view_layout="horizontal">
+
+				<View layout_borders="Rect(3,8,0,3)" view_layout="horizontal">
+					<TextView value="Boss Targets:" layout_borders="Rect(5,5,9,0)" />
+					<TextInputView name="BossInput" max_size="Point(150,15)" min_size="Point(150,15)" layout_borders="Rect(5,5,5,0)" />
+					<DropdownMenu name="BossDropdown" layout_borders="Rect(5,5,5,0)" />
+					<Button name="AddBoss" label="Add" layout_borders="Rect(5,5,5,0)"/>
+					<Button name="RemoveBoss" label="Remove" layout_borders="Rect(5,5,5,0)"/>
+				</View>
+				<HLayoutSpacer/>
+			</View>
+
+			<View view_layout="horizontal">
+
+				<View layout_borders="Rect(3,8,0,3)" view_layout="horizontal">
+					<TextView value="Global Ignore:" layout_borders="Rect(5,5,8,0)" />
+					<TextInputView name="GlobalInput" max_size="Point(150,15)" min_size="Point(150,15)" layout_borders="Rect(5,5,5,0)" />
+					<DropdownMenu name="GlobalDropdown" layout_borders="Rect(5,5,5,0)" />
+					<Button name="AddGlobal" label="Add" layout_borders="Rect(5,5,5,0)"/>
+					<Button name="RemoveGlobal" label="Remove" layout_borders="Rect(5,5,5,0)"/>
+				</View>
+				<HLayoutSpacer/>
+			</View>
+
+			<View view_layout="Center">
+				<TextView value="You can also add names by targeting a character and clicking Add." layout_borders="Rect(5,5,5,5)" />
+				<HLayoutSpacer/>
+			</View>
+
+		</BorderView>
+	</BorderView>
+</root>

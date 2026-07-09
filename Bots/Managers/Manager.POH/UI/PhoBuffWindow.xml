@@ -1,0 +1,11 @@
+﻿<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="Pho Buff" layout_borders="Rect(0,0,0,2)" max_size="Point(16000,-1)">
+		<View view_layout="horizontal">
+	
+	<TextView name="BuffName" font="LARGE"  layout_borders="Rect(10,2,5,2)"/>
+	
+	<TextView name="Buff" font="HUGE" layout_borders="Rect(5,2,10,2)"/>
+		</View>
+
+	</BorderView>
+</root>

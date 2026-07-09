@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="Settings" layout_borders="Rect(0,0,0,2)" max_size="Point(16000,-1)">
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="How it works:" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="- Monitors added assist characters." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="- If any are attacking, it attacks their target." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="- If multiple are attacking, it picks the closest target." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="- If none are attacking, it stops attacking." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Either type a character name (case-sensitive) into the box," layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="or target a character. In both cases, click Save to add." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Commands:" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="/toggle - Start or stop the bot." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="/ManagerAssist - Open or close the UI." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+	</BorderView>
+</root>

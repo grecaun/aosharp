@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="POH" layout_borders="Rect(0,0,0,2)" min_size="Point(150,15)" max_size="Point(16000,-1)">
+
+		<Button name="ManagerHelpInfoView" label="Info" layout_borders="Rect(5,5,5,5)" h_alignment="center"/>
+
+		<BorderView v_alignment="top" h_alignment="center" name="KitSettings" layout_borders="Rect(5,5,5,5)" view_layout="vertical" max_size="Point(16000,-1)">
+			<TextView value="Kit Settings" layout_borders="Rect(5,5,5,5)" />
+			<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(0,0,0,0)"/>
+			<View v_alignment="top" h_alignment="center" view_layout="vertical" layout_borders="Rect(0,0,0,0)">
+				<TextView value=" " layout_borders="Rect(0,0,0,0)"/>
+				<OptionCheckBox label="Auto sit Kit" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerHelp__AutoSit" layout_borders="Rect(0,4,0,4)"/>
+			</View>
+
+			<View view_layout="horizontal" h_alignment="center" layout_borders="Rect(5,5,5,2)">
+				<TextView value="Health %" layout_borders="Rect(0,0,5,0)"/>
+				<TextInputView name="KitHealthPercentageBox" min_size="Point(30,14)" max_size="Point(30,14)" layout_borders="Rect(0,0,10,0)"/>
+				<TextView value="Nano %" layout_borders="Rect(0,0,5,0)"/>
+				<TextInputView name="KitNanoPercentageBox" min_size="Point(30,14)" max_size="Point(30,14)" />
+			</View>
+
+			<Button name="KitSave" label="Save" h_alignment="center" layout_borders="Rect(5,5,5,2)"/>
+
+		</BorderView>
+
+		<BorderView v_alignment="top" h_alignment="center" name="ToggleOptions" view_layout="vertical" layout_borders="Rect(5,5,5,5)" max_size="Point(16000,-1)">
+			<TextView value="Options" h_alignment="center" layout_borders="Rect(5,5,5,5)"/>
+			<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(0,0,0,15)"/>
+			<View v_alignment="top" h_alignment="center" view_layout="vertical" layout_borders="Rect(0,0,0,0)">
+				<OptionCheckBox label="Show traps and mines" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerHelp__Traps" layout_borders="Rect(0,4,0,4)"/>
+				<OptionCheckBox label="Show Rookie(S28)" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerHelp__RookieArrow" layout_borders="Rect(0,4,0,4)"/>
+
+				<Button name="BroadcastSettingsView" label="Broadcast Settings" layout_borders="Rect(0,4,0,4)"/>
+				<OptionCheckBox label="(12man) Morph Pathing" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerHelp__MorphPathing" layout_borders="Rect(0,4,0,4)"/>
+				<OptionCheckBox label="(DB3) Shapes" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerHelp__Db3Shapes" layout_borders="Rect(0,4,0,4)"/>
+				<OptionCheckBox label="(Sub) Belly Pathing" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerHelp__BellyPathing" layout_borders="Rect(0,4,0,4)"/>
+				<OptionCheckBox label="(Sub) Eumenides" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerHelp__Eumenides" layout_borders="Rect(0,4,0,4)"/>
+			</View>
+
+			<View v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" layout_borders="Rect(5,5,5,5)" max_size="Point(16000,-1)">
+				<Button name="EumenidesPositionsView" label="Eumenides Positions" layout_borders="Rect(0,4,0,4)"/>
+				<Button name="YalmButton" label="Flying/Yalms" layout_borders="Rect(0,4,0,4)"/>
+			</View>
+			
+		</BorderView>
+
+		<View view_layout="center">
+			<View name="Errors" view_layout="vertical" v_alignment="TOP" h_alignment="center" layout_borders="Rect(0,0,0,0)" max_size="Point(16000,-1)">
+				<Haxxor/>
+			</View>
+		</View>
+
+		<TextView value="" layout_borders="Rect(0,0,0,2)"/>
+		<TextView name="VersionNumber" value="" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="" layout_borders="Rect(0,0,0,2)"/>
+	</BorderView>
+</root>

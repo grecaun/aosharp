@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" name="Settings" layout_borders="Rect(5,5,5,5)">
+		<Button name="Add" label="Add" layout_borders="Rect(5,5,5,5)"/>
+		<Button name="Remove" label="Remove" layout_borders="Rect(5,5,5,5)"/>
+		<Button name="Open" label="Open" layout_borders="Rect(5,5,5,5)"/>
+	</BorderView>
+</root>

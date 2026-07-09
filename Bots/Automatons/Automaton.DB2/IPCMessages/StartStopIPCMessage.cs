@@ -1,0 +1,18 @@
+﻿using AOSharp.Common.GameData;
+using AOSharp.Core.IPC;
+using SmokeLounge.AOtomation.Messaging.Serialization.MappingAttributes;
+
+namespace AutomatonDB2.IPCMessages
+{
+    [AoContract((int)IPCOpcode.StartStop)]
+    public class StartStopIPCMessage : IPCMessage
+    {
+        public override short Opcode => (short)IPCOpcode.StartStop;
+
+        [AoMember(0)]
+        public bool IsStarting { get; set; }
+
+        [AoMember(1)]
+        public Identity Sender { get; set; }
+    }
+}

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<Root>
+	<View>
+		<BitmapView name="Logo" h_alignment="LEFT">
+			<View view_layout="horizontal" min_size="Point(-1,20)" layout_borders="Rect(5,3,4,0)">
+				<TextView layout_borders="Rect(20,1,0,0)" value="- Welcome to Mali's Damage Meter -     " font="BOLD" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+				<Button layout_borders="Rect(10,1,0,0)" min_size="Point(15,15)"  max_size="Point(15,15)" name="Close"/>				
+			</View>
+			<View layout_borders="Rect(20,15,0,0)"  h_alignment="LEFT">
+				<View view_layout="horizontal" layout_borders="Rect(5,4,4,0)">
+					<Button name="Start" min_size="Point(15,15)"  max_size="Point(15,15)"/>
+					<TextView layout_borders="Rect(2,0,2,0)" value="/" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+					<Button name="Pause" min_size="Point(15,15)"  max_size="Point(15,15)"/>
+					<TextView min_size="Point(120,15)" layout_borders="Rect(2,0,2,0)" value="- Start / Pause" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+				</View>
+				<View view_layout="horizontal" layout_borders="Rect(5,4,4,0)">
+					<Button name="Reset" min_size="Point(15,15)"  max_size="Point(15,15)"/>
+					<TextView min_size="Point(120,15)" layout_borders="Rect(2,0,2,0)" value="- Reset" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+				</View>
+				<View view_layout="horizontal" layout_borders="Rect(5,4,4,0)">
+					<Button name="Mode" min_size="Point(15,15)"  max_size="Point(15,15)"/>
+					<TextView min_size="Point(120,15)" layout_borders="Rect(2,0,2,0)" value="- Damage / Healing" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+				</View>				
+				<View view_layout="horizontal" layout_borders="Rect(5,4,4,0)">
+					<Button name="Log" min_size="Point(15,15)"  max_size="Point(15,15)"/>
+					<TextView min_size="Point(120,15)" layout_borders="Rect(2,0,2,0)" value="- Save current logs" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+				</View>			
+				<View view_layout="horizontal" layout_borders="Rect(5,4,4,0)">
+					<Button name="Solo" min_size="Point(15,15)"  max_size="Point(15,15)"/>
+					<TextView layout_borders="Rect(2,0,2,0)" value="/" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+					<Button name="Group" min_size="Point(15,15)"  max_size="Point(15,15)"/>
+					<TextView layout_borders="Rect(2,0,2,0)" value="/" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+					<Button name="All" min_size="Point(15,15)"  max_size="Point(15,15)"/>
+					<TextView min_size="Point(166,15)" layout_borders="Rect(2,0,2,0)"  value="- Solo / Group / All" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+				</View>
+				<View view_layout="horizontal" layout_borders="Rect(5,4,4,0)">
+					<Button name="Settings" min_size="Point(15,15)"  max_size="Point(15,15)"/>
+					<TextView min_size="Point(120,15)" layout_borders="Rect(2,0,2,0)" value="- Settings" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+				</View>			
+				<View h_alignment="left">
+					<TextView layout_borders="Rect(6,10,2,2)" value="Color Codes:" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+					<View view_layout="horizontal" layout_borders="Rect(4,5,0,4)">
+						<TextView  layout_borders="Rect(2,0,2,0)" font="SMALL" value="Weapon" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+						<HLayoutSpacer/>
+						<TextView  layout_borders="Rect(2,0,2,0)" font="SMALL" value="Specials" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+						<HLayoutSpacer/>
+						<TextView  layout_borders="Rect(2,0,2,0)" font="SMALL" value="Nanobots" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+						<HLayoutSpacer/>
+						<TextView  layout_borders="Rect(2,0,2,0)" font="SMALL" value="Pet" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+						<HLayoutSpacer/>
+						<TextView  layout_borders="Rect(2,0,2,0)" font="SMALL" value="Reflect/Shield" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+					</View>
+					<View name="MeterViewDmgRoot" max_size="Point(253,-1)"  layout_borders="Rect(-13,0,2,0)">
+						<Haxxor/>
+					</View>
+					<View view_layout="horizontal"  layout_borders="Rect(55,5,58,4)">
+						<TextView  layout_borders="Rect(2,0,2,0)" font="SMALL" value="User" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+						<HLayoutSpacer/>
+						<TextView  layout_borders="Rect(2,0,2,0)" font="SMALL" value="Pet" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+					</View>
+					<View name="MeterViewHealRoot" max_size="Point(253,-1)"  layout_borders="Rect(-13,0,2,0)">
+						<Haxxor/>
+					</View>
+				</View>
+			</View>
+
+			<View layout_borders="Rect(20,0,0,0)">
+				<TextView name="Commands" layout_borders="Rect(0,0,5,0)"  color="0x00FFF1AC" feature_flags="TVF_MULTILINE|TVF_RENDER_SHADOW"/>
+			</View>
+			<View layout_borders="Rect(20,0,0,0)">
+				<TextView layout_borders="Rect(0,0,5,0)"  color="0x00FFF1AC" feature_flags="TVF_MULTILINE|TVF_RENDER_SHADOW" name="Info"/>
+				<TextView min_size="Point(-1,20)"  value="~ Made with AOSharp SDK" layout_borders="Rect(90,0,0,0)" font="SMALL" color="0x00FFF1AC" feature_flags="TVF_MULTILINE|TVF_RENDER_SHADOW"/>
+			</View>
+		</BitmapView>
+	</View>
+</Root>

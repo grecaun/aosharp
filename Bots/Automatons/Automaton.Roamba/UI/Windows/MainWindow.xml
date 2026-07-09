@@ -1,0 +1,46 @@
+<?xml version="1.0" standalone="yes"?>
+<root>
+	<View view_layout="vertical" name="Root">
+		<BorderView>
+			<View name="CoreViewRoot">
+				<Haxxor/>
+			</View>
+
+			<BorderView layout_borders="Rect(4,0,4,4)" view_layout="horizontal">
+				<View layout_borders="Rect(8,8,8,8)">
+					<View view_layout="horizontal">
+						<TextView font="SMALL" value="Path:"/>
+						<HLayoutSpacer/>
+						<TextView feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW"  font="ITALIC" name="ActivePath" color="0x00FFFF00"/>
+					</View>
+					<View view_layout="horizontal" layout_borders="Rect(0,8,0,0)">
+						<View view_layout="horizontal">
+							<CheckBox name="PathSync" layout_borders="Rect(0,0,0,0)"/>
+							<TextView value="Sync" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="SMALL" color="0x00FFFF00"/>
+						</View>
+						<HLayoutSpacer/>
+						<Button name="PathEditor" label="Edit"/>
+					</View>
+				</View>
+			</BorderView>
+			
+			<BorderView layout_borders="Rect(4,0,4,4)" view_layout="horizontal">
+				<View layout_borders="Rect(8,8,8,8)">
+					<View view_layout="horizontal">
+						<TextView font="SMALL" value="Config:"/>
+						<HLayoutSpacer/>
+						<TextView feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW"  font="ITALIC" name="ActiveConfig" color="0x00FFFF00"/>
+					</View>
+					<View view_layout="horizontal" layout_borders="Rect(0,8,0,0)">
+						<View view_layout="horizontal">
+							<CheckBox name="ConfigSync" layout_borders="Rect(0,0,0,0)"/>
+							<TextView value="Sync" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="SMALL" color="0x00FFFF00"/>
+						</View>
+						<HLayoutSpacer/>
+						<Button name="ConfigEditor" label="Edit"/>
+					</View>
+				</View>
+			</BorderView>
+		</BorderView>
+	</View>
+</root>

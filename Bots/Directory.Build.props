@@ -1,0 +1,13 @@
+<Project>
+	<PropertyGroup>
+		<!-- Force bin output to solution-level folder -->
+		<SolutionDir Condition="'$(SolutionDir)' == ''">$(MSBuildThisFileDirectory)</SolutionDir>
+		<BaseOutputPath>$(SolutionDir)bin\</BaseOutputPath>
+
+		<!-- Disable XML doc output -->
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
+
+		<!-- Optional: disable .xml even if specified in project files -->
+		<DocumentationFile></DocumentationFile>
+	</PropertyGroup>
+</Project>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="Info" layout_borders="Rect(0,0,0,2)" max_size="Point(16000,-1)">
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="How to use the bot:" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="• Target a character and adjust the slider for follow distance." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="• Click Save to store both the target and distance." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="• Click Send:" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="  – If you’ve just selected a new target, it sends the current target and slider position." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="  – If no target is selected, it sends your last saved target and distance." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="Commands:" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="/ManagerFollow - Open or close the settings UI." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="/toggle - Start or stop follow mode (broadcasts status)." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="/ManagerFollowchannel - Change the IPC broadcast channel." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+	</BorderView>
+</root>

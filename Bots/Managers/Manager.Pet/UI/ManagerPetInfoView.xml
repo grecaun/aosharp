@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="Settings" layout_borders="Rect(0,0,0,2)" max_size="Point(16000,-1)">
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="The Channel must match the handlers!" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value="This plugin is for the driver character in a multibox team." layout_borders="Rect(5,0,5,2)"/>
+		<TextView value="It lets a non-pet class control the pets of pet classes in the team." layout_borders="Rect(5,0,5,2)"/>
+		<TextView value="Pet classes include: Agent, Bureaucrat, Engineer, and Meta-Physicist." layout_borders="Rect(5,0,5,2)"/>
+		<TextView value="Do NOT inject this plugin on pet class characters." layout_borders="Rect(5,0,5,2)"/>
+		<TextView value="Pet class handlers already include this functionality internally." layout_borders="Rect(5,0,5,5)"/>
+		<TextView value="Commands;" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="/ManagerPet - Turns SyncPets on or off." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="/ManagerPetchannel - Change the IPC broadcast channel." layout_borders="Rect(0,0,0,2)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+	</BorderView>
+</root>

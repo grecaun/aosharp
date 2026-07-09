@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<View>
+		<BitmapView name="Background">
+			<View view_layout="horizontal" min_size="Point(-1, 20)">
+				<TextView layout_borders="Rect(70,0,0,0)" value="- Settings -" font="BOLD" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+				<HLayoutSpacer/>
+				<Button name="Help" layout_borders="Rect(0,0,1,0)" />
+				<Button name="Close" layout_borders="Rect(0,0,3,0)" />
+			</View>		
+			<View view_layout="horizontal" layout_borders="Rect(2,4,0,0)">
+				<Button layout_borders="Rect(2,0,2,0)" name="AutoTimer"/>
+				<TextView value="Auto toggle timer if player(s) in combat" font="SMALL" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+				<HLayoutSpacer/>
+			</View>
+			<View view_layout="horizontal" layout_borders="Rect(2,4,0,0)">
+				<Button layout_borders="Rect(2,0,2,0)" name="TotalValues"/>
+				<TextView value="Live display totals" font="SMALL" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+				<HLayoutSpacer/>
+			</View>
+			<View view_layout="horizontal" layout_borders="Rect(2,4,0,0)">
+				<Button layout_borders="Rect(2,0,2,0)" name="LogMobs"/>
+				<TextView value="Log monsters" font="SMALL" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+				<HLayoutSpacer/>
+			</View>
+			<View view_layout="horizontal" layout_borders="Rect(2,4,0,0)">
+				<Button layout_borders="Rect(2,0,2,0)" name="TotalPerMinute"/>
+				<TextView value="Total Per Minute" font="SMALL" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+				<HLayoutSpacer/>
+				<Button layout_borders="Rect(2,0,2,0)" name="ActivePerMinute"/>
+				<TextView value="Active Per Minute" font="SMALL" color="0x00FFF1AC" feature_flags="TVF_RENDER_SHADOW"/>
+			</View>
+			<VLayoutSpacer/>
+
+		</BitmapView>
+	</View>
+</root>

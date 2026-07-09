@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="POH" layout_borders="Rect(0,0,0,2)" min_size="Point(150,15)" max_size="Point(16000,-1)">
+
+		<Button name="InfoView" label="Info" layout_borders="Rect(5,5,5,5)" h_alignment="center"/>
+
+		<!--<BorderView v_alignment="top" h_alignment="center" name="KitSettings" layout_borders="Rect(5,5,5,5)" view_layout="vertical" max_size="Point(16000,-1)">
+			<TextView value="Kit Settings" layout_borders="Rect(5,5,5,5)" />
+			<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(0,0,0,0)"/>
+			<View v_alignment="top" h_alignment="center" view_layout="vertical" layout_borders="Rect(0,0,0,0)">
+				<TextView value=" " layout_borders="Rect(0,0,0,0)"/>
+				<OptionCheckBox label="Auto sit Kit" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerPOH__AutoSit" layout_borders="Rect(0,4,0,4)"/>
+			</View>
+
+			<View view_layout="horizontal" h_alignment="center" layout_borders="Rect(5,5,5,2)">
+				<TextView value="Health %" layout_borders="Rect(0,0,5,0)"/>
+				<TextInputView name="KitHealthPercentageBox" min_size="Point(30,14)" max_size="Point(30,14)" layout_borders="Rect(0,0,10,0)"/>
+				<TextView value="Nano %" layout_borders="Rect(0,0,5,0)"/>
+				<TextInputView name="KitNanoPercentageBox" min_size="Point(30,14)" max_size="Point(30,14)" />
+			</View>
+
+			<Button name="KitSave" label="Save" h_alignment="center" layout_borders="Rect(5,5,5,2)"/>
+
+		</BorderView>-->
+
+		<View v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" layout_borders="Rect(5,5,5,5)" max_size="Point(16000,-1)">
+			<Button name="POHPathButton" label="Path to portal mobs" layout_borders="Rect(5,5,5,2)"/>
+			<Button name="PhoBuff" label="Pho Buff" layout_borders="Rect(5,2,5,5)"/>
+		</View>
+
+		<BorderView v_alignment="top" h_alignment="center" name="ToggleOptions" view_layout="vertical" layout_borders="Rect(5,5,5,5)" max_size="Point(16000,-1)">
+			<TextView value="Options" h_alignment="center" layout_borders="Rect(5,5,5,5)"/>
+			<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(0,0,0,15)"/>
+			<View v_alignment="top" h_alignment="center" view_layout="vertical" layout_borders="Rect(0,0,0,0)">
+				
+				<OptionCheckBox label="Hightlight Rifts" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerPOH__Rift" layout_borders="Rect(0,4,0,4)"/>
+				<Button name="BroadcastSettingsView" label="Broadcast Settings" layout_borders="Rect(0,4,0,4)"/>
+				
+				<OptionCheckBox label="Path to Alters" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerPOH__Alters" layout_borders="Rect(0,4,0,4)"/>
+			</View>
+
+			<View v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" layout_borders="Rect(5,5,5,5)" max_size="Point(16000,-1)">
+				
+				<Button name="POHView" label="Positions" layout_borders="Rect(0,4,0,4)"/>
+				
+			</View>
+			
+		</BorderView>
+
+		<View view_layout="center">
+			<View name="Errors" view_layout="vertical" v_alignment="TOP" h_alignment="center" layout_borders="Rect(0,0,0,0)" max_size="Point(16000,-1)">
+				<Haxxor/>
+			</View>
+		</View>
+
+		<TextView value="" layout_borders="Rect(0,0,0,2)"/>
+		<TextView name="VersionNumber" value="" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="" layout_borders="Rect(0,0,0,2)"/>
+	</BorderView>
+</root>

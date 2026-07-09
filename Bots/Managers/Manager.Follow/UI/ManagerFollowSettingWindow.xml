@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="ManagerFollow" layout_borders="Rect(5,5,5,5)" max_size="Point(16000,-1)">
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+
+		<Button name="ManagerFollowInfoView" label="Info" layout_borders="Rect(5,0,5,5)" max_size="Point(100,22)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,3)"/>
+		<Button name="Enable_Disable_Button" label="" layout_borders="Rect(5,0,5,5)" max_size="Point(100,20)"/>
+
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+
+		<View view_layout="vertical" layout_borders="Rect(5,5,5,5)" max_size="Point(16000,-1)">
+			<TextView value="Target to follow" layout_borders="Rect(0,0,0,2)"/>
+			<TextView name="FollowCharacterName" value="" min_size="Point(115,14)" max_size="Point(115,14)" layout_borders="Rect(5,5,5,5)"/>
+
+			<View view_layout="horizontal" layout_borders="Rect(0,10,0,2)">
+				<TextView value="Follow distance:" h_alignment="LEFT"/>
+				<TextView name="NavFollowDistanceValue" value="" h_alignment="RIGHT" max_size="Point(30,14)"/>
+			</View>
+			<Slider name="NavFollowDistanceSlider" min_value="2" max_value="15" value="5" min_size="Point(60,18)" layout_borders="Rect(5,0,5,5)"/>
+		</View>
+
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+
+		<View view_layout="horizontal" layout_borders="Rect(5,5,5,5)">
+			<Button name="SaveButton" label="Save" layout_borders="Rect(0,0,5,0)"/>
+			<Button name="SendButton" label="Send" layout_borders="Rect(5,0,0,0)"/>
+		</View>
+
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value="" layout_borders="Rect(0,0,0,2)"/>
+		<TextView name="VersionNumber" value="" layout_borders="Rect(0,0,0,2)"/>
+		<TextView value="" layout_borders="Rect(0,0,0,2)"/>
+	</BorderView>
+</root>

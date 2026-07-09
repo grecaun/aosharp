@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="ManagerSync" layout_borders="Rect(5,5,5,5)" max_size="Point(16000,-1)">
+
+		<Button name="ManagerSyncInfoView" label="INSTRUCTIONS!" layout_borders="Rect(0,10,0,5)"/>
+		
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		
+		<Button name="Enable_Disable_Button" label="" layout_borders="Rect(0,5,0,5)"/>
+		<Button name="OutsideTeamInvites" label="" layout_borders="Rect(0,5,0,5)"/>
+		<Button name="LogAllOut" label="Log All Out" layout_borders="Rect(0,5,0,5)"/>
+		<Button name="TeamButton" label="" layout_borders="Rect(0,5,0,5)"/>
+
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+
+		<Button name="BroadcastSettingsView" label="Broadcast Settings" layout_borders="Rect(0,5,0,0)"/>
+
+		<View v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" layout_borders="Rect(50,0,50,0)" max_size="Point(16000,-1)">
+			<TextView value="" layout_borders="Rect(0,0,0,2)"/>
+
+			<OptionCheckBox label="Attack" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerSync__SyncAttack" layout_borders="Rect(10,1,5,1)"/>
+			<OptionCheckBox label="Movement" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerSync__SyncMove" layout_borders="Rect(10,1,5,1)"/>
+			<OptionCheckBox label="Use" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerSync__SyncUse" layout_borders="Rect(10,1,5,1)"/>
+			<OptionCheckBox label="Bags" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerSync__SyncBags" layout_borders="Rect(10,1,5,1)"/>
+			<OptionCheckBox label="Trade" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerSync__SyncTrade" layout_borders="Rect(10,1,5,1)"/>
+			<OptionCheckBox label="NPC chat" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerSync__SyncChat" layout_borders="Rect(10,1,5,1)"/>
+			<OptionCheckBox label="NPC trade" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerSync__NPCTrade" layout_borders="Rect(10,1,5,1)"/>
+
+			<OptionRadioButtonGroup label="BS Side" opt_category="AOSharp" opt_type="variant" opt_variable="ManagerSync__BSSideSelection" layout_borders="Rect(0,5,0,5)">
+				<RadioButton label="Red" value="0"/>
+				<RadioButton label="Blue" value="1"/>
+			</OptionRadioButtonGroup>
+
+
+			<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+
+		</View>
+
+		<View v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" layout_borders="Rect(50,5,50,5)" max_size="Point(16000,-1)">
+
+			<Button name="SpreadOut" label="Spread Out" layout_borders="Rect(0,0,0,5)"/>
+
+			<View view_layout="center">
+				<View name="Errors" view_layout="vertical" v_alignment="TOP" h_alignment="center" layout_borders="Rect(0,0,0,0)" max_size="Point(16000,-1)">
+					<Haxxor/>
+				</View>
+			</View>
+
+			<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+
+			<TextView name="VersionNumber" value="" layout_borders="Rect(0,0,0,5)"/>
+		</View>
+
+	</BorderView>
+</root>

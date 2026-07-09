@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<Root>
+	<View>
+		<BorderView>
+			<BorderView view_layout="horizontal" layout_borders="Rect(4,4,4,4)">
+				<HLayoutSpacer/>
+				<TextView name="Title" feature_flags="TVF_ENABLE_SHADOW|TVF_RENDER_SHADOW" font="ITALIC" color="0x00FFFF00" layout_borders="Rect(4,4,4,4)"/>
+				<HLayoutSpacer/>
+			</BorderView>
+			<BorderView layout_borders="Rect(4,0,4,4)">
+				<View layout_borders="Rect(8,8,8,8)">
+					<Button name="CreateNew" label="Create New" min_size="Point(130,-1)"/>
+				</View>
+			</BorderView>
+			<BorderView layout_borders="Rect(4,0,4,4)">
+				<View layout_borders="Rect(8,8,8,8)">
+					<ComboBox name="AllFiles" feature_flags="TVF_RENDER_SHADOW" min_size="Point(115, 15)" max_size="Point(115, 15)"/>
+					<View view_layout="horizontal">
+						<Button name="LoadFile" label="Load" min_size="Point(58, 15)" layout_borders="Rect(0,10,0,0)"/>
+						<HLayoutSpacer/>
+						<Button name="EditFile" label="Edit" min_size="Point(58, 15)" layout_borders="Rect(13,10,0,0)"/>
+					</View>
+				</View>
+			</BorderView>
+		</BorderView>
+	</View>
+</Root>

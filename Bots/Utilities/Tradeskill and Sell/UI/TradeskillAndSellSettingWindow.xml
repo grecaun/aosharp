@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<root>
+	<BorderView v_alignment="TOP" h_alignment="CENTER" view_layout="vertical" name="Settings" layout_borders="Rect(5,5,5,5)" max_size="Point(16000,-1)">
+		<TextView value=" " layout_borders="Rect(5,5,5,5)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<Button name="Start/Stop-Button" label="Start/Stop" layout_borders="Rect(5,5,3,5)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<View view_layout="vertical">
+			<View view_layout="horizontal">
+				<HLayoutSpacer/>
+				<View layout_borders="Rect(3,8,0,3)" view_layout="vertical">
+					<OptionCheckBox label="Sell Item" opt_category="AOSharp" opt_type="variant" opt_variable="TradeSkillAndSell__SellToggle" layout_borders="Rect(10,1,5,1)"/>
+				</View>
+				<HLayoutSpacer/>
+				<View layout_borders="Rect(3,8,0,3)" view_layout="vertical">
+					<TextInputView name="Sell" max_size="Point(150,15)" min_size="Point(150,15)"  layout_borders="Rect(5,5,5,0)" />
+				</View>
+				<HLayoutSpacer/>
+			</View>
+		</View>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<View view_layout="vertical">
+			<View view_layout="horizontal">
+				<HLayoutSpacer/>
+				<View layout_borders="Rect(3,8,0,3)" view_layout="vertical">
+					<TextView name="SourceTextView" value="Source" layout_borders="Rect(5,5,5,0)" />
+					<TextInputView name="Source" max_size="Point(150,15)" min_size="Point(150,15)"  layout_borders="Rect(5,5,5,0)" />
+				</View>
+				<HLayoutSpacer/>
+				<View view_layout="vertical">
+					<TextView font="HUGE" value="#+_1"/>
+					<VLayoutSpacer max_size="15" min_size="15"/>
+				</View>
+				<HLayoutSpacer/>
+				<View layout_borders="Rect(3,8,0,3)" view_layout="vertical">
+					<TextView name="TargetTextView" value="Target" layout_borders="Rect(5,5,5,0)" />
+					<TextInputView name="Target" max_size="Point(150,15)" min_size="Point(150,15)"  layout_borders="Rect(5,5,5,0)" />
+				</View>
+				<HLayoutSpacer/>
+				<View view_layout="vertical">
+					<VLayoutSpacer max_size="30" min_size="30"/>
+					<Button label="Set" layout_borders="Rect(3,3,10,3)" name="SetButton"/>
+					<VLayoutSpacer/>
+				</View>
+				<HLayoutSpacer/>
+			</View>
+		</View>
+		<TextView value=" " layout_borders="Rect(0,0,0,2)"/>
+		<BitmapView bitmap_id="GFX_GUI_FRIENDLIST_SPLITTER" layout_borders="Rect(5,5,5,5)"/>
+		<TextView value="*Make sure there are no spaces after the name. " layout_borders="Rect(0,0,0,2)"/>>
+		<TextView value="*Sells at 29 items " layout_borders="Rect(0,0,0,2)"/>>
+		<TextView value=" " layout_borders="Rect(5,5,5,5)"/>
+	</BorderView>
+</root>
