@@ -1,4 +1,5 @@
-﻿using AOSharp.Core.IPC;
+﻿using AOSharp.Common.GameData;
+using AOSharp.Core.IPC;
 using SmokeLounge.AOtomation.Messaging.Serialization.MappingAttributes;
 
 namespace Mounter
@@ -16,12 +17,18 @@ namespace Mounter
         private class MountMessage : IPCMessage
         {
             public override short Opcode => (short)IPCOpcode.Mount;
+
+            [AoMember(0)]
+            public Identity Sender { get; set; }
         }
 
         [AoContract((int)IPCOpcode.Dismount)]
         private class DismountMessage : IPCMessage
         {
             public override short Opcode => (short)IPCOpcode.Mount;
+
+            [AoMember(0)]
+            public Identity Sender { get; set; }
         }
     }
 }

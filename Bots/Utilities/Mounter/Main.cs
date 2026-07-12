@@ -3,6 +3,7 @@ using AOSharp.Core;
 using AOSharp.Core.IPC;
 using AOSharp.Core.UI;
 using System;
+using System.Linq;
 
 namespace Mounter
 {
@@ -34,7 +35,10 @@ namespace Mounter
                         if (buff.Nanoline == NanoLine.Vehicles || buff.Name.Contains("Phasefront"))
                         {
                             buff.Remove();
-                            IPCChannel.Broadcast(new DismountMessage());
+                            IPCChannel.Broadcast(new DismountMessage
+                            {
+                                Sender = DynelManager.LocalPlayer.Identity,
+                            });
                             return;
                         }
                     }
@@ -44,7 +48,10 @@ namespace Mounter
                         if (spell.Nanoline == NanoLine.Vehicles || spell.Name.Contains("Phasefront"))
                         {
                             spell.Cast();
-                            IPCChannel.Broadcast(new MountMessage());
+                            IPCChannel.Broadcast(new MountMessage
+                            {
+                                Sender = DynelManager.LocalPlayer.Identity,
+                            });
                             return;
                         }
                     }
@@ -61,7 +68,8 @@ namespace Mounter
 
         public void OnMountMessage(int sender, IPCMessage msg)
         {
-            if (!(msg is MountMessage)) return;
+            if (!(msg is MountMessage mountMsg)) return;
+            if (!DynelManager.Players.Any(p => p.Identity == mountMsg.Sender)) { return; }
             foreach (var spell in Spell.List.OrderByStackingOrder())
             {
                 if (spell.Nanoline == NanoLine.Vehicles || spell.Name.Contains("Phasefront"))
@@ -74,7 +82,8 @@ namespace Mounter
 
         public void OnDismountMessage(int sender, IPCMessage msg)
         {
-            if (!(msg is DismountMessage)) return;
+            if (!(msg is DismountMessage mountMsg)) return;
+            if (!DynelManager.Players.Any(p => p.Identity == mountMsg.Sender)) { return; }
             foreach (Buff buff in DynelManager.LocalPlayer.Buffs)
             {
                 if (buff.Nanoline == NanoLine.Vehicles || buff.Name.Contains("Phasefront"))
