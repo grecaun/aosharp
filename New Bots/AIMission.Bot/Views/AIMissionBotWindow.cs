@@ -31,12 +31,38 @@ namespace AIMission.Bot.Views
             if (Window.FindView("StartStopButton", out _viewCache.StartStopButton))
                 _viewCache.StartStopButton.Clicked += (o, e) => StartStopButtonClicked();
 
+            if (Window.FindView("FormButton", out _viewCache.FormButton))
+                _viewCache.FormButton.Clicked += (o, e) => FormButtonClicked();
+
+            _viewCache.FormButton?.SetLabel(Team.IsInTeam ? "Disband" : "Team");
+
+            if (Window.FindView("BroadcastButton", out _viewCache.BroadcastButton))
+                _viewCache.BroadcastButton.Clicked += (o, e) => BroadcastButtonClicked();
+
             Window.FindView("MissionCounter", out _viewCache.MissionCounterLabel);
 
             if (Window.FindView("DifficultySelector", out _viewCache.DifficultySelector))
                 _viewCache.DifficultySelector.SetValue(Variant.Create((int)AIMissionBot.Config.MissionDifficulty));
 
             foreach(var boss in AIMissionBot.Config.Bosses)
+            {
+                if (!Window.FindView(boss.Key, out Checkbox bossCheckBox))
+                    continue;
+
+                bossCheckBox.SetValue(boss.Value);
+                _viewCache.BossCheckBoxes[boss.Key] = bossCheckBox;
+            }
+
+            if (Window.FindView("ClearCoccoonsCheckbox", out _viewCache.ClearCoccoonsCheckBox))
+                _viewCache.ClearCoccoonsCheckBox.SetValue(AIMissionBot.Config.ClearCoccoons);
+        }
+
+        internal void UpdateView()
+        {
+            if (Window.FindView("DifficultySelector", out _viewCache.DifficultySelector))
+                _viewCache.DifficultySelector.SetValue(Variant.Create((int)AIMissionBot.Config.MissionDifficulty));
+
+            foreach (var boss in AIMissionBot.Config.Bosses)
             {
                 if (!Window.FindView(boss.Key, out Checkbox bossCheckBox))
                     continue;
@@ -79,6 +105,18 @@ namespace AIMission.Bot.Views
             }
         }
 
+        private void FormButtonClicked()
+        {
+            _viewCache.FormButton?.SetLabel(!Team.IsInTeam ? "Disband" : "Team");
+            _bot.ToggleTeam();
+        }
+
+        private void BroadcastButtonClicked()
+        {
+            UpdateConfig();
+            _bot.SendSettings();
+        }
+
         private void UpdateConfig()
         {
             AIMissionBot.Config.MissionDifficulty = GetSelectedMissionDifficulty();
@@ -110,6 +148,8 @@ namespace AIMission.Bot.Views
         {
             public TextView MissionCounterLabel;
             public Button StartStopButton;
+            public Button FormButton;
+            public Button BroadcastButton;
             public RadioButtonGroup DifficultySelector;
             public Dictionary<string, Checkbox> BossCheckBoxes = new Dictionary<string, Checkbox>();
             public Checkbox ClearCoccoonsCheckBox;

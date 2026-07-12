@@ -6,14 +6,11 @@ using AOBotBase.BTViewer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AOSharp.Core.IPC;
 using BTBotBase;
 using AOBotBase.IPCMessages;
 using System.Reflection;
 using AOSharp.Common.GameData;
-using SmokeLounge.AOtomation.Messaging.Serialization.MappingAttributes;
 using BTBotBase.Polls;
 using Serilog.Core;
 
@@ -43,6 +40,9 @@ namespace AOBotBase
 
         private AutoResetInterval _btTickInterval = new AutoResetInterval(100);
 
+        public Identity TeamSender = Identity.None;
+        public bool _pendingReform = false;
+
         public override void Run()
         {
             try
@@ -51,7 +51,9 @@ namespace AOBotBase
                 _ipcChannel.RegisterCallback((int)BTBotBaseIPCOpcode.BotJoin, CompanionJoined);
                 _ipcChannel.RegisterCallback((int)BTBotBaseIPCOpcode.BotLeft, CompanionLeft);
                 _ipcChannel.RegisterCallback((int)BTBotBaseIPCOpcode.StartAll, (o, e) => Start());
+                _ipcChannel.RegisterCallback((int)BTBotBaseIPCOpcode.StopAll, (o, e) => Stop());
                 _ipcChannel.RegisterCallback((int)BTBotBaseIPCOpcode.RosterUpdate, OnRosterUpdate);
+                _ipcChannel.RegisterCallback((int)BTBotBaseIPCOpcode.Team, LocalTeamMessageReceived);
 
                 IPCChannel.LoadMessages(Assembly.GetExecutingAssembly());
 
@@ -85,8 +87,13 @@ namespace AOBotBase
                         Logger.Information($"Only the team leader can run this command.");
                 });
 
+                Chat.RegisterCommand("botform", FormCommand);
+                Chat.RegisterCommand("botreform", ReformCommand);
+
                 Game.OnUpdate += (s, e) => OnUpdate();
                 Game.TeleportEnded += (s, e) => OnZoned();
+                Team.TeamRequest += TeamRequestReceived;
+                Team.MemberLeft += MemberLeft;
             } 
             catch (Exception ex)
             {
@@ -119,6 +126,22 @@ namespace AOBotBase
                 }
                 _btWindow.Update();
             }
+
+            if (_pendingReform)
+            {
+                if (!Team.IsInTeam)
+                {
+                    _pendingReform = false;
+                    if (TeamSender == DynelManager.LocalPlayer.Identity)
+                    {
+                        ToggleTeam();
+                    }
+                }
+                else
+                {
+                    Team.Leave();
+                }
+            }
         }
 
         protected virtual void OnZoned()
@@ -128,9 +151,7 @@ namespace AOBotBase
         }
 
         protected virtual void Init()
-        {
-
-        }
+        { }
 
         private void OnRosterUpdate(int charId, IPCMessage e)
         {
@@ -247,6 +268,97 @@ namespace AOBotBase
                 }).ToArray()
             });
         }
+
+        private void FormCommand(string command, string[] param, ChatWindow chatWindow)
+        {
+            ToggleTeam();
+        }
+
+        private void ReformCommand(string command, string[] param, ChatWindow chatWindow)
+        {
+            Reform();
+        }
+
+        public void Reform()
+        {
+            if (Team.IsInTeam)
+            {
+                _ipcChannel.Broadcast(new LocalTeamMessage
+                {
+                    Sender = TeamSender,
+                    TeamAction = 2,
+                    Receiver = Identity.None
+                });
+
+                _ipcChannel.Broadcast(new LocalTeamMessage
+                {
+                    Sender = TeamSender,
+                    TeamAction = 4,
+                    Receiver = Identity.None
+                });
+
+                _pendingReform = true;
+            }
+            else
+                ToggleTeam();
+        }
+
+        public void TeamButtonClicked(object sender, ButtonBase e)
+        {
+            ToggleTeam();
+        }
+
+        public void ToggleTeam()
+        {
+            int action = Team.IsInTeam ? 2 : 0;
+
+            TeamSender = DynelManager.LocalPlayer.Identity;
+
+            _ipcChannel.Broadcast(new LocalTeamMessage
+            {
+                Sender = DynelManager.LocalPlayer.Identity,
+                TeamAction = action,
+                Receiver = Identity.None,
+            });
+        }
+
+        public void LocalTeamMessageReceived(int sender, IPCMessage msg)
+        {
+            if (!(msg is LocalTeamMessage teamMsg)) return;
+            var LPID = DynelManager.LocalPlayer.Identity;
+
+            switch (teamMsg.TeamAction)
+            {
+                case 0:
+                    if (Team.IsInTeam) return;
+                    TeamSender = teamMsg.Sender;
+                    _ipcChannel.Broadcast(new LocalTeamMessage { Sender = LPID, Receiver = LPID, TeamAction = 3 });
+                    break;
+                case 2:
+                    Team.Leave();
+                    break;
+                case 3:
+                    if (TeamSender != LPID) return;
+                    Team.Invite(teamMsg.Receiver);
+                    break;
+                case 4:
+                    _pendingReform = true;
+                    break;
+            }
+        }
+
+        internal void TeamRequestReceived(object sender, TeamRequestEventArgs e)
+        {
+            e.Accept();
+        }
+
+        internal void MemberLeft(object sender, Identity e)
+        {
+            if (Team.IsLeader)
+            {
+                Team.Invite(e);
+            }
+        }
     }
 
     public enum BTBotBaseIPCOpcode
@@ -260,7 +372,9 @@ namespace AOBotBase
         SharedTarget = 12008,
         PollStart = 12010,
         PollVote = 12011,
-        PollClosed = 12012
+        PollClosed = 12012,
+
+        Team = 12013
     }
 
     public enum BotRole

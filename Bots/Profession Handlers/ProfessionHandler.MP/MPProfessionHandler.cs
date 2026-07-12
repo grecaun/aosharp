@@ -291,25 +291,22 @@ namespace ProfessionHandler.Metaphysicist
                 {
                     if (Time.AONormalTime > weaponCheckDelay && !DynelManager.LocalPlayer.IsAttacking && !Spell.HasPendingCast && Spell.List.Any(s => s.IsReady))
                     {
-                        if (HasWeapon())
+                        foreach (Item weapon in Inventory.Items)
                         {
-                            foreach (Item weapon in Inventory.Items)
+                            if (allWeaponNames.Contains(weapon.Name) || allShieldNames.Contains(weapon.Name))
                             {
-                                if (allWeaponNames.Contains(weapon.Name))
-                                {
-                                    List<EquipSlot> slot = weapon.EquipSlots;
+                                List<EquipSlot> slot = weapon.EquipSlots;
 
-                                    if (weapon.Slot.Type != IdentityType.WeaponPage)
+                                if (weapon.Slot.Type != IdentityType.WeaponPage)
+                                {
+                                    if (Time.AONormalTime > weaponDelay + 10)
                                     {
-                                        if (Time.AONormalTime > weaponDelay + 10)
+                                        foreach (EquipSlot equipSlot in weapon.EquipSlots)
                                         {
-                                            foreach (EquipSlot equipSlot in weapon.EquipSlots)
-                                            {
-                                                weapon.Equip(equipSlot);
-                                                break;
-                                            }
-                                            weaponDelay = Time.AONormalTime;
+                                            weapon.Equip(equipSlot);
+                                            break;
                                         }
+                                        weaponDelay = Time.AONormalTime;
                                     }
                                 }
                             }

@@ -250,6 +250,7 @@
     <Compile Include="Consts.cs" />
     <Compile Include="IBotContext.cs" />
     <Compile Include="IPCMessages\BotLeftMessage.cs" />
+    <Compile Include="IPCMessages\LocalTeamMessage.cs" />
     <Compile Include="IPCMessages\PollClosedMessage.cs" />
     <Compile Include="IPCMessages\RosterUpdateMessage.cs" />
     <Compile Include="IPCMessages\SharedTargetMessage.cs" />

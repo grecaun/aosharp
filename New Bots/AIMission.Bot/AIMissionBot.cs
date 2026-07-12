@@ -62,6 +62,24 @@ namespace AIMission.Bot
                     mission.Delete();
             });
 
+            _ipcChannel.RegisterCallback((int)AIMissionBotIPCOpcode.SendSettings, (e, o) =>
+            {
+                if (o is SendSettingsMessage msg)
+                {
+                    Config.MissionDifficulty = msg.Difficulty;
+                    Config.ClearCoccoons = msg.ClearCoccoons;
+                    foreach(string boss in Config.Bosses.Keys)
+                    {
+                        if (msg.Bosses.TryGetValue(boss, out bool enabled))
+                        {
+                            Config.Bosses[boss] = enabled;
+                        }
+                    }
+                    Config.Save();
+                    _window.UpdateView();
+                }
+            });
+
             NpcDialog.AnswerListChanged += NpcDialog_AnswerListChanged;
             Network.N3MessageReceived += N3MessageReceived;
             DynelManager.DynelSpawned += OnDynelSpawned;
@@ -260,10 +278,21 @@ namespace AIMission.Bot
                 Identity = identity
             });
         }
+
+        public void SendSettings()
+        {
+            _ipcChannel.Broadcast(new SendSettingsMessage
+            {
+                Difficulty = Config.MissionDifficulty,
+                Bosses = Config.Bosses,
+                ClearCoccoons = Config.ClearCoccoons,
+            });
+        }
     }
 
     public enum AIMissionBotIPCOpcode
     {
         SetActiveMission = 13000,
+        SendSettings = 13001,
     }
 }

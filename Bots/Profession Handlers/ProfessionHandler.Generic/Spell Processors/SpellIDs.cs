@@ -506,7 +506,7 @@ namespace ProfessionHandler.Generic
             };
             public static readonly int[] OneHanded =
             {
-                 //Asp of Titaniush //couldn’t find the nano ID
+                275849, //Asp of Titaniush
                 154977, //Gold Acantophis
                 154978, //Bitis Striker
                 154979, //Coplan's Hand Taipan
@@ -515,7 +515,7 @@ namespace ProfessionHandler.Generic
             public static readonly int[] Shield =
             {
                 273376, //Shield of Zset
-                275851, //Shield of Esa
+                275852, //Shield of Esa
                 154971, //Shield of Asmodian
                 154974, //Mocham's Guard"
                 154972, //Death Ward

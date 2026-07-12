@@ -24,7 +24,10 @@
 				<TextView name="MissionCounter" value="0"/>
 				<HLayoutSpacer/>
 			</View>
-			<Button label="Start" name="StartStopButton" layout_borders="Rect(10,10,10,10)"/>
 		</View>
+		<Button label="Broadcast Settings" name="BroadcastButton" layout_borders="Rect(5,5,5,5)"/>
+		<Button label="Team" name="FormButton" layout_borders="Rect(5,5,5,5)"/>
+		<Button label="Start" name="StartStopButton" layout_borders="Rect(5,5,5,5)"/>
+		<HLayoutSpacer/>
 	</View>
 </root>

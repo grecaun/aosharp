@@ -2762,6 +2762,10 @@ namespace ProfessionHandler.Generic
                 "Bitis Striker",
                 "Coplan's Hand Taipan",
                 "The Crotalus",
+            };
+
+        public static List<string> allShieldNames = new List<string>
+        {
                 "Shield of Zset",
                 "Shield of Esa",
                 "Shield of Asmodian",
@@ -2772,8 +2776,8 @@ namespace ProfessionHandler.Generic
                 "Solar Guard",
                 "Notum Defender",
                 "Vital Buckler",
-                "Living Shield of Evernan"
-            };
+                "Living Shield of Evernan",
+        };
 
         protected bool TwoHandedWeapon(Spell spell, SimpleChar fightingTarget, ref (SimpleChar Target, bool ShouldSetTarget) actionTarget)
         {
@@ -2781,7 +2785,7 @@ namespace ProfessionHandler.Generic
 
             if (Time.AONormalTime < weaponCheckDelay && DynelManager.LocalPlayer.IsAttacking && Spell.HasPendingCast && Spell.List.Any(s => !s.IsReady)) return false;
 
-            if (HasWeapon()) return false;
+            if (HasWeapon() || HasShield()) return false;
 
             return true;
         }
@@ -2797,11 +2801,13 @@ namespace ProfessionHandler.Generic
         }
         protected bool ShieldWeapon(Spell spell, SimpleChar fightingTarget, ref (SimpleChar Target, bool ShouldSetTarget) actionTarget)
         {
-            if (_settings["SummonedWeaponSelection"].AsInt32() != 3) return false;
+            if (_settings["SummonedWeaponSelection"].AsInt32() < 2) return false;
+
+            if (_settings["SummonedWeaponSelection"].AsInt32() == 2 && spell.Id == 273376) return false;
 
             if (Time.AONormalTime < weaponCheckDelay && DynelManager.LocalPlayer.IsAttacking && Spell.HasPendingCast && Spell.List.Any(s => !s.IsReady)) return false;
 
-            if (HasWeapon()) return false;
+            if (HasShield()) return false;
 
             return true;
         }
@@ -2811,6 +2817,16 @@ namespace ProfessionHandler.Generic
             foreach (Item weapon in Inventory.Items)
             {
                 if (allWeaponNames.Contains(weapon.Name))
+                    return true;
+            }
+            return false;
+        }
+
+        public static bool HasShield()
+        {
+            foreach (Item weapon in Inventory.Items)
+            {
+                if (allShieldNames.Contains(weapon.Name))
                     return true;
             }
             return false;
