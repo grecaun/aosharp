@@ -129,6 +129,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boss Logger", "Utilities\Bo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Mounter", "Utilities\Mounter\Utility.Mounter.csproj", "{3266AC0E-C037-4BA3-8F64-F41CD45AE310}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Teams", "Utilities\Teams\Utility.Teams.csproj", "{F77F545C-E3A6-4B02-96BA-9C663C8ACB51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -601,6 +603,14 @@ Global
 		{3266AC0E-C037-4BA3-8F64-F41CD45AE310}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3266AC0E-C037-4BA3-8F64-F41CD45AE310}.Release|x86.ActiveCfg = Release|x86
 		{3266AC0E-C037-4BA3-8F64-F41CD45AE310}.Release|x86.Build.0 = Release|x86
+		{F77F545C-E3A6-4B02-96BA-9C663C8ACB51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F77F545C-E3A6-4B02-96BA-9C663C8ACB51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F77F545C-E3A6-4B02-96BA-9C663C8ACB51}.Debug|x86.ActiveCfg = Debug|x86
+		{F77F545C-E3A6-4B02-96BA-9C663C8ACB51}.Debug|x86.Build.0 = Debug|x86
+		{F77F545C-E3A6-4B02-96BA-9C663C8ACB51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F77F545C-E3A6-4B02-96BA-9C663C8ACB51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F77F545C-E3A6-4B02-96BA-9C663C8ACB51}.Release|x86.ActiveCfg = Release|x86
+		{F77F545C-E3A6-4B02-96BA-9C663C8ACB51}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -664,6 +674,7 @@ Global
 		{4D5B93FD-97F3-433D-851F-EFF0815A6517} = {EBABA3F7-41F4-4C52-8BEB-FCA5EE450232}
 		{42D0B3C5-180E-4934-AE86-FE40FD0E5532} = {EBABA3F7-41F4-4C52-8BEB-FCA5EE450232}
 		{3266AC0E-C037-4BA3-8F64-F41CD45AE310} = {EBABA3F7-41F4-4C52-8BEB-FCA5EE450232}
+		{F77F545C-E3A6-4B02-96BA-9C663C8ACB51} = {EBABA3F7-41F4-4C52-8BEB-FCA5EE450232}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72F8AFC0-EFFC-4E79-A294-78238D227A37}

@@ -73,6 +73,8 @@ namespace AIMission.Bot.Views
 
             if (Window.FindView("ClearCoccoonsCheckbox", out _viewCache.ClearCoccoonsCheckBox))
                 _viewCache.ClearCoccoonsCheckBox.SetValue(AIMissionBot.Config.ClearCoccoons);
+
+            _viewCache.FormButton?.SetLabel(Team.IsInTeam ? "Disband" : "Team");
         }
 
         private void StartStopButtonClicked()
@@ -107,8 +109,8 @@ namespace AIMission.Bot.Views
 
         private void FormButtonClicked()
         {
-            _viewCache.FormButton?.SetLabel(!Team.IsInTeam ? "Disband" : "Team");
             _bot.ToggleTeam();
+            _viewCache.FormButton?.SetLabel(Team.IsInTeam ? "Disband" : "Team");
         }
 
         private void BroadcastButtonClicked()

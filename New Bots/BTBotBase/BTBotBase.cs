@@ -137,10 +137,6 @@ namespace AOBotBase
                         ToggleTeam();
                     }
                 }
-                else
-                {
-                    Team.Leave();
-                }
             }
         }
 
