@@ -21,7 +21,6 @@ namespace Teams
         {
             if (e is GroupMsgMessage msg)
             {
-                Chat.WriteLine($"Group Message: '{msg.Text}' -- Sender {msg.SenderId} -- Channel {msg.ChannelId}");
                 if (msg.Text.Equals("#teamup", System.StringComparison.OrdinalIgnoreCase) && DynelManager.LocalPlayer.Identity.Instance != msg.SenderId)
                 {
                     Chat.SendPrivateMessage(msg.SenderId, "invite me");
@@ -29,7 +28,6 @@ namespace Teams
             }
             else if (e is PrivateMsgMessage priv)
             {
-                Chat.WriteLine($"Private Message: '{priv.Text}' -- Sender {priv.Sender}");
                 if (priv.Text.Equals("teamup", System.StringComparison.OrdinalIgnoreCase))
                 {
                     Chat.SendPrivateMessage(priv.Sender, "invite me");
