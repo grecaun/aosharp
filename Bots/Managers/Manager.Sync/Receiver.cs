@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using AOSharp.Common.GameData;
+﻿using AOSharp.Common.GameData;
 using AOSharp.Core;
 using AOSharp.Core.Inventory;
 using AOSharp.Core.IPC;
@@ -9,6 +7,8 @@ using AOSharp.Core.UI;
 using ManagerSync.IPCMessages;
 using SmokeLounge.AOtomation.Messaging.GameData;
 using SmokeLounge.AOtomation.Messaging.Messages.N3Messages;
+using System;
+using System.Linq;
 using static ManagerSync.ManagerSync;
 
 namespace ManagerSync
@@ -112,6 +112,7 @@ namespace ManagerSync
         public static void OnMoveMessage(int s, IPCMessage msg)
         {
             if (!_settings["Enable"].AsBool()) return;
+            if (!_settings["SyncMove"].AsBool()) return;
             if (IsActiveWindow) return;
             if (Game.IsZoning) return;
 
@@ -488,6 +489,32 @@ namespace ManagerSync
             {
                 if (settingsWindow.FindView("OutsideTeamInvites", out Button invitesButton))
                     invitesButton.SetLabel($"Outside invites is {(_settings["OutsideTeamInvites"].AsBool() ? "on" : "off")}");
+            }
+        }
+
+        #endregion
+
+        #region Plant
+
+        internal static void PlantReceived(int arg1, IPCMessage message)
+        {
+            var plant = (PlantCommand)message;
+
+            if (DynelManager.LocalPlayer.Identity == plant.Receiver)
+            {
+                _settings["SyncMove"] = !_settings["SyncMove"].AsBool();
+                Save();
+                planted = !_settings["SyncMove"].AsBool();
+                MovementController.Instance.SetMovement(MovementAction.FullStop);
+                if (planted)
+                {
+                    plantedLocation = plant.Position;
+                    Chat.WriteLine($"Planting at {plantedLocation}");
+                }
+                else
+                {
+                    Chat.WriteLine("No longer planted.");
+                }
             }
         }
 

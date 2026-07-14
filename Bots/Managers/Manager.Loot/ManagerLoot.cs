@@ -104,7 +104,7 @@ namespace ManagerLoot
 
                 CurrentProcess = ProcessState.Load_Backpacks;
 
-                MainUI();
+                //MainUI();
 
                 Chat.WriteLine($"{PluginName} loaded!");
                 Chat.WriteLine($"/{PluginName} to open/close UI. /lm to enable/disable");

@@ -61,6 +61,9 @@ namespace ManagerSync
         private double bagDelay = 1.0;
         private List <Identity> Bags = new List<Identity>();
 
+        internal static Vector3 plantedLocation = new Vector3();
+        internal static bool planted = false;
+
         public override void Run()
         {
             try
@@ -120,6 +123,7 @@ namespace ManagerSync
                 _IPCChannel.RegisterCallback((int)IPCOpcode.Team, Receiver.LocalTeamMessageReceived);
                 _IPCChannel.RegisterCallback((int)IPCOpcode.OSInvites, Receiver.OutsideInvitesRecieved);
                 _IPCChannel.RegisterCallback((int)IPCOpcode.LFTCode, Receiver.LFT_Message_Received);
+                _IPCChannel.RegisterCallback((int)IPCOpcode.Plant, Receiver.PlantReceived);
 
                 _IPCChannel.RegisterCallback((int)IPCOpcode.BattleStation, Receiver.Battle_Station_Message_Received);
 
@@ -148,6 +152,8 @@ namespace ManagerSync
                 {
                     SpreadOut();
                 });
+
+                Chat.RegisterCommand("plant", (cmd, param, win) => Plant(param));
 
                 Game.OnUpdate += OnUpdate;
                 Network.N3MessageSent += Sender.Network_N3MessageSent;
@@ -193,7 +199,10 @@ namespace ManagerSync
         {
             try
             {
-                if (Game.IsZoning) { return; }
+                if (Game.IsZoning) {
+                    planted = false;
+                    return;
+                }
 
                 if (settingsWindow != null && settingsWindow.IsValid)
                 {
@@ -267,6 +276,11 @@ namespace ManagerSync
                 {
                     if (localplayer.MovementState == MovementState.Run && leader.MovementState != MovementState.Run)
                         MovementController.Instance.SetMovement(MovementAction.FullStop);
+                }
+
+                if (planted && localplayer.Position.DistanceFrom(plantedLocation) > 1)
+                {
+                    MovementController.Instance.SetDestination(plantedLocation);
                 }
             }
             catch (Exception ex)
@@ -379,6 +393,11 @@ namespace ManagerSync
             Chat.WriteLine($"{label} set to: {_settings[settingKey].AsBool()}");
             Save();
 
+            if (settingKey.Equals("SyncMove") && _settings[settingKey].AsBool())
+            {
+                planted = false;
+            }
+
             if (param.Length > 0 && param[0].Equals("all", StringComparison.OrdinalIgnoreCase))
                 Broadcast_Settings();
         }
@@ -442,6 +461,38 @@ namespace ManagerSync
 
             _IPCChannel.Broadcast(msg);
             _currentFormation = (_currentFormation + 1) % 6;
+        }
+
+        public static void Plant(string[] param)
+        {
+            var player = DynelManager.LocalPlayer;
+            if (param != null && param.Length > 0)
+            {
+                foreach (string p in param)
+                {
+                    foreach (var person in DynelManager.Players)
+                    {
+                        if (person.Name.Equals(p))
+                        {
+                            var msg = new PlantCommand
+                            {
+                                Position = player.Position,
+                                Receiver = person.Identity,
+                                Sender = player.Identity
+                            };
+
+                            Chat.WriteLine($"Telling {p} to stay at {player.Position}.");
+
+                            _IPCChannel.Broadcast(msg);
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Chat.WriteLine("One or more character names are specified for this command.");
+            }
         }
 
         public static void Start()

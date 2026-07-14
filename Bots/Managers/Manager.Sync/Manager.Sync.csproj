@@ -75,6 +75,7 @@
     <Compile Include="IPCMessages\NpcFinishTradeMessage.cs" />
     <Compile Include="IPCMessages\NPCStartTrade.cs" />
     <Compile Include="IPCMessages\OutsideInvitesIPCMessage.cs" />
+    <Compile Include="IPCMessages\PlantCommand.cs" />
     <Compile Include="IPCMessages\SpreadCommand.cs" />
     <Compile Include="IPCMessages\StartStopIPCMessage.cs" />
     <Compile Include="IPCMessages\TargetMessage.cs" />
