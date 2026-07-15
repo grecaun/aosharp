@@ -491,7 +491,16 @@ namespace ManagerSync
             }
             else
             {
-                Chat.WriteLine("One or more character names are specified for this command.");
+                var msg = new PlantCommand
+                {
+                    Position = player.Position,
+                    Receiver = Identity.None,
+                    Sender = player.Identity
+                };
+
+                Chat.WriteLine($"Telling everyone to stay at {player.Position}.");
+
+                _IPCChannel.Broadcast(msg);
             }
         }
 

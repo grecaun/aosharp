@@ -499,8 +499,8 @@ namespace ManagerSync
         internal static void PlantReceived(int arg1, IPCMessage message)
         {
             var plant = (PlantCommand)message;
-
-            if (DynelManager.LocalPlayer.Identity == plant.Receiver)
+            var localPlayer = DynelManager.LocalPlayer.Identity;
+            if (localPlayer == plant.Receiver || (plant.Receiver == Identity.None && plant.Sender != localPlayer))
             {
                 _settings["SyncMove"] = !_settings["SyncMove"].AsBool();
                 Save();
